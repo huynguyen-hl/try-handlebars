@@ -8,7 +8,7 @@
     <style>
       :root {
         /* FIXME */
-        --image-src: url('{{credentialSubject.productImage}}');
+        --image-src: url('{{credentialSubject.productImage.linkURL}}');
       }
       * {
         margin: 0;
@@ -246,7 +246,7 @@
       }
 
       .passport-issued-by-header p {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
         line-height: 19.25px;
         color: #55606E;
@@ -279,7 +279,7 @@
         gap: 8px;
 
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 17.44px;
         color: #000000;
       }
@@ -355,15 +355,42 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 19.25px;
-        text-align: left;
         text-transform: uppercase;
+        color: #55606E;
       }
       .conformity-evidence-name {
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 18.88px;
-        text-align: left;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.24px;
         color: #1F5A95;
+      }
+      .declared-values,
+      .assessment-criteria {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .declared-title,
+      .assessment-criteria-title {
+        color: #232E3D;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 17.44px;
+      }
+      .assessment-criteria-item {
+        padding-left: 15px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 17.44px;
+      }
+      .assessment-criteria-item span {
+        font-weight: 700;
+      }
+      .assessment-criteria-item a {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 15.26px;
+        color: #232E3D;
       }
 
       .production {
@@ -533,7 +560,7 @@
       /* Media Queries for Mobiles */
       @media (min-width: 390px) {
         .container {
-          width: 390px;
+          min-width: 390px;
         }
         .contents {
           display: none;
@@ -543,7 +570,7 @@
       /* Media Queries for Desktops */
       @media (min-width: 1440px) {
         .container {
-          width: 1040px;
+          min-width: 1040px;
           min-height: 3000px;
           display: flex;
           align-items: flex-start;
@@ -807,6 +834,7 @@
           display: grid;
           grid-template-columns: 1fr 1.3fr;
           gap: 32px;
+          width: 100%;
         }
 
         .container .div-7 {
@@ -853,10 +881,8 @@
         }
 
         .container .text-wrapper-6 {
-          position: relative;
           align-self: stretch;
           margin-top: -1px;
-          font-family: 'Proxima Nova-Black', Helvetica;
           font-weight: 900;
           color: var(--primary-colorsblue-700);
           font-size: 56px;
@@ -866,9 +892,7 @@
         }
 
         .container .text-wrapper-7 {
-          position: relative;
           width: fit-content;
-          font-family: 'Lato', sans-serif;
           font-weight: 700;
           color: var(--primary-colorsblue-700);
           font-size: 16px;
@@ -905,7 +929,6 @@
         }
 
         .container .text-wrapper-8 {
-          position: relative;
           align-self: stretch;
           font-weight: 400;
           color: var(--primary-colorsgray-600);
@@ -974,10 +997,8 @@
         }
 
         .container .text-wrapper-10 {
-          position: relative;
           width: fit-content;
           margin-top: -1px;
-          font-family: 'Proxima Nova-Black', Helvetica;
           font-weight: 900;
           color: var(--primary-colorsblue-700);
           font-size: 56px;
@@ -1177,12 +1198,13 @@
           font-size: 14px;
           letter-spacing: 0;
           line-height: 19.2px;
+          text-transform: uppercase;
         }
 
         .container .text-wrapper-15 {
           position: relative;
           align-self: stretch;
-          font-weight: 700;
+          font-weight: 400;
           color: var(--primary-colorsblue-700);
           font-size: 18px;
           letter-spacing: 0;
@@ -1332,6 +1354,13 @@
           font-size: 14px;
           letter-spacing: 0;
           line-height: 19.2px;
+        }
+
+        .container .text-wrapper-18 {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 17.44px;
+          color: #232E3D;
         }
 
         .container .black-line {
@@ -1486,6 +1515,12 @@
           flex: 0 0 auto;
         }
 
+        .container .frame-29 {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+
         .container .type-of-event {
           position: relative;
           flex: 1;
@@ -1615,7 +1650,7 @@
           </div>
           <div class="passport-box-item">
             <!-- FIXME -->
-            <h3>{{credentialSubject.circularityScorecard.recyecledContent}}</h3>
+            <h3>{{credentialSubject.circularityScorecard.recycledContent}}</h3>
             <p>Recycled content</p>
           </div>
           <div class="passport-box-item">
@@ -1636,7 +1671,7 @@
 
         <div class="traceability-cards">
           <!-- FIXME -->
-          <a href="{{credentialSubject.circularityScorecard.recyclingInformation}}" class="traceability-card">
+          <a href="{{credentialSubject.circularityScorecard.recyclingInformation.linkURL}}" class="traceability-card">
             <div class="traceability-card-text">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.82 15.42L19.32 19.75C18.83 20.61 17.92 21.06 17 21H15V23L12.5 18.5L15 14V16H17.82L15.6 12.15L19.93 9.65L21.73 12.77C22.25 13.54 22.32 14.57 21.82 15.42ZM9.21003 3.06H14.21C15.19 3.06 16.04 3.63 16.45 4.45L17.45 6.19L19.18 5.19L16.54 9.6L11.39 9.69L13.12 8.69L11.71 6.24L9.50003 10.09L5.16003 7.59L6.96003 4.47C7.37003 3.64 8.22003 3.06 9.21003 3.06ZM5.05003 19.76L2.55003 15.43C2.06003 14.58 2.13003 13.56 2.64003 12.79L3.64003 11.06L1.91003 10.06L7.05003 10.14L9.70003 14.56L7.97003 13.56L6.56003 16H11V21H7.40003C6.93154 21.0339 6.46293 20.9357 6.0475 20.7165C5.63206 20.4973 5.28648 20.1659 5.05003 19.76Z" fill="#1F5A95"/>
@@ -1650,7 +1685,7 @@
             </div>
           </a>
           <!-- FIXME -->
-          <a href="{{credentialSubject.circularityScorecard.repairInformation}}" class="traceability-card">
+          <a href="{{credentialSubject.circularityScorecard.repairInformation.linkURL}}" class="traceability-card">
             <div class="traceability-card-text">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18.85 21.975C18.7167 21.975 18.5917 21.9543 18.475 21.913C18.3583 21.8717 18.25 21.8007 18.15 21.7L13.05 16.6C12.95 16.5 12.879 16.3917 12.837 16.275C12.795 16.1583 12.7743 16.0333 12.775 15.9C12.7757 15.7667 12.7967 15.6417 12.838 15.525C12.8793 15.4083 12.95 15.3 13.05 15.2L15.175 13.075C15.275 12.975 15.3833 12.9043 15.5 12.863C15.6167 12.8217 15.7417 12.8007 15.875 12.8C16.0083 12.7993 16.1333 12.8203 16.25 12.863C16.3667 12.9057 16.475 12.9763 16.575 13.075L21.675 18.175C21.775 18.275 21.846 18.3833 21.888 18.5C21.93 18.6167 21.9507 18.7417 21.95 18.875C21.9493 19.0083 21.9287 19.1333 21.888 19.25C21.8473 19.3667 21.7763 19.475 21.675 19.575L19.55 21.7C19.45 21.8 19.3417 21.871 19.225 21.913C19.1083 21.955 18.9833 21.9757 18.85 21.975ZM18.85 19.6L19.575 18.875L15.9 15.2L15.175 15.925L18.85 19.6ZM5.125 22C4.99167 22 4.86267 21.975 4.738 21.925C4.61333 21.875 4.50067 21.8 4.4 21.7L2.3 19.6C2.2 19.5 2.125 19.3873 2.075 19.262C2.025 19.1367 2 19.008 2 18.876C2 18.744 2.025 18.619 2.075 18.501C2.125 18.383 2.2 18.2747 2.3 18.176L7.6 12.876H9.725L10.575 12.026L6.45 7.9H5.025L2 4.875L4.825 2.05L7.85 5.075V6.5L11.975 10.625L14.875 7.725L13.8 6.65L15.2 5.25H12.375L11.675 4.55L15.225 1L15.925 1.7V4.525L17.325 3.125L20.875 6.675C21.1583 6.95833 21.375 7.27933 21.525 7.638C21.675 7.99667 21.75 8.37567 21.75 8.775C21.75 9.17433 21.675 9.55767 21.525 9.925C21.375 10.2923 21.1583 10.6173 20.875 10.9L18.75 8.775L17.35 10.175L16.3 9.125L11.125 14.3V16.4L5.825 21.7C5.725 21.8 5.61667 21.875 5.5 21.925C5.38333 21.975 5.25833 22 5.125 22ZM5.125 19.6L9.375 15.35V14.625H8.65L4.4 18.875L5.125 19.6ZM5.125 19.6L4.4 18.875L4.775 19.225L5.125 19.6Z" fill="#1F5A95"/>
@@ -1707,16 +1742,18 @@
 
       <section class="declarations">
         <div class="declaration-title">Declarations</div>
+        <!-- FIXME -->
+        {{#each credentialSubject.conformityDeclarations}}
         <div class="declaration-body">
           <div class="conformity">
             <!-- FIXME -->
-            <p class="conformity-topic">{{credentialSubject.conformityTopic}}</p>
+            <p class="conformity-topic">{{conformityTopic}}</p>
             <!-- FIXME -->
-            <p class="conformity-evidence-name">{{credentialSubject.conformityEvidence.linkName}}</p>
+            <p class="conformity-evidence-name">{{conformityEvidence.linkName}}</p>
           </div>
           <!-- FIXME -->
-          {{#each credentialSubject.conformityDeclarations}}
-          <!-- FIXME -->
+          <div class="declared-values">
+            <p class="declared-title">Declared values</p>
             {{#each declaredValues}}
             <div class="table">
               <div class="table-item">
@@ -1734,34 +1771,28 @@
                 <!-- FIXME -->
                 <div class="item-value">{{accuracy}}</div>
               </div>
-              <!-- <p>*{{name}}: {{thresholdValues.0.metricValue.value}}</p> -->
             </div>
             {{/each}}
+          </div>
+
+          <div class="assessment-criteria">
+            <p class="assessment-criteria-title">Assessment Criteria</p>
             <!-- FIXME -->
             {{#each assessmentCriteria}}
-            <div class="annotation">
-              <!-- FIXME -->
-              <p>*{{name}}: {{thresholdValues.0.metricValue.value}}</p>
+            <div class="assessment-criteria-list">
+              <ul class="assessment-criteria-item">
+                <li>
+                    Industry average {{name}} is <span>{{thresholdValues.0.metricValue.value}}{{thresholdValues.0.metricValue.unit}}</span>.
+                    <div><a href="{{id}}" class="blue-bottom-line">Assessment criteria</a></div>
+                </li>
+              </ul>
             </div>
             {{/each}}
-          {{/each}}
+          </div>
+
           <div class="traceability-cards">
             <!-- FIXME -->
-            <a href="{{credentialSubject.conformityDeclarations.0.assessmentCriteria.0.id}}" class="traceability-card">
-              <div class="traceability-card-text">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM5 5V19H19V5H17V12L14.5 10.5L12 12V5H5Z" fill="#1F5A95"/>
-                  </svg>                    
-                <p>Assessment criteria</p>
-              </div>
-              <div class="traceability-card-view-details">
-                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 1L8 8L1 15" stroke="#1F5A95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-              </div>
-            </a>
-            <!-- FIXME -->
-            <a href="{{credentialSubject.conformityDeclarations.0.conformityEvidence.0.linkURL}}" class="traceability-card">
+            <a href="{{conformityEvidence.linkURL}}" class="traceability-card">
               <div class="traceability-card-text">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM5 5V19H19V5H17V12L14.5 10.5L12 12V5H5Z" fill="#1F5A95"/>
@@ -1778,9 +1809,10 @@
           <div class="table-line"></div>
           <div class="annotation">
             <!-- FIXME -->
-            <p>Administered in {{credentialSubject.conformityDeclarations.0.referenceRegulation.jurisdictionCountry}} by <a href="{{credentialSubject.conformityDeclarations.0.referenceRegulation.administeredBy.id}}" class="gray-bottom-line">{{credentialSubject.conformityDeclarations.0.referenceRegulation.administeredBy.name}}</a> Issued by <a href="{{credentialSubject.conformityDeclarations.0.referenceStandard.id}}" class="gray-bottom-line">{{credentialSubject.conformityDeclarations.0.referenceStandard.name}}</a>, 2024 </p>
+            <p>Administered in {{referenceRegulation.jurisdictionCountry}} by <a href="{{referenceRegulation.administeredBy.id}}" class="gray-bottom-line">{{referenceRegulation.administeredBy.name}}</a> Issued by <a href="{{referenceStandard.issuingParty.id}}" class="gray-bottom-line">{{referenceStandard.issuingParty.name}}</a>, 2024 </p>
           </div>
         </div>
+      {{/each}}
       </section>
 
       <section class="production">
@@ -1789,7 +1821,7 @@
           <div class="table-item">
             <span class="item-title">Product category</span>
             <!-- FIXME -->
-            <p class="item-value">{{credentialSubject.productCategory.0.name}}</p>
+            <p class="item-value">{{#each credentialSubject.productCategory}}{{name}}{{/each}}</p>
           </div>
           <div class="table-item">
             <span class="item-title">Produced by</span>
@@ -1816,13 +1848,13 @@
           <div class="table-item">
             <span class="item-title">Dimensions</span>
             <!-- FIXME -->
-            <p class="item-value">{{credentialSubject.dimensions}}</p>
+            <p class="item-value">{{credentialSubject.dimensions.length.value}}{{credentialSubject.dimensions.length.unit}} x {{credentialSubject.dimensions.width.value}}{{credentialSubject.dimensions.width.unit}} x {{credentialSubject.dimensions.height.value}}{{credentialSubject.dimensions.height.unit}}</p>
           </div>
         </div>
       </section>
 
       <!-- FIXME: characteristics?????  -->
-      <section class="production">
+      {{!-- <section class="production">
         <div class="production-title">Production data</div>
         <div class="product-table table">
           <div class="table-item">
@@ -1844,7 +1876,7 @@
             <p class="item-value">100kwh</p>
           </div>
         </div>
-      </section>
+      </section> --}}
 
       <section class="composition">
         <div>
@@ -1866,9 +1898,9 @@
                 <p class="composition-title">{{name}}</p>
                 <div class="composition-tag">
                   <!-- FIXME -->
-                  <p class="composition-tag-item">{{recycledAmount}}</p>
+                  <p class="composition-tag-item">Recycled {{recycledAmount}}</p>
                   <!-- FIXME -->
-                  <p class="composition-tag-item">{{hazardous}}</p>
+                  <p class="composition-tag-item">Hazard {{hazardous}}</p>
                 </div>
                 <!-- FIXME -->
                 <a href="{{materialSafetyInformation.linkURL}}" class="blue-bottom-line">{{materialSafetyInformation.linkName}}</a>
@@ -1992,7 +2024,7 @@
                 <div class="rectangle"></div>
                 <div class="frame-7">
                   <!-- FIXME -->
-                  <div class="text-wrapper-6">{{credentialSubject.circularityScorecard.recyecledContent}}</div>
+                  <div class="text-wrapper-6">{{credentialSubject.circularityScorecard.recycledContent}}</div>
                   <div class="text-wrapper-7">Recycled content</div>
                 </div>
                 <div class="rectangle-2"></div>
@@ -2004,7 +2036,7 @@
                 <div class="rectangle"></div>
                 <div class="frame-8">
                   <!-- FIXME -->
-                  <div class="text-wrapper-6">.{{credentialSubject.circularityScorecard.materialCircularityIndicator}}</div>
+                  <div class="text-wrapper-6">{{credentialSubject.circularityScorecard.materialCircularityIndicator}}</div>
                   <div class="text-wrapper-7">Material circularity*</div>
                 </div>
               </div>
@@ -2014,7 +2046,7 @@
             </div>
             <div class="frame-9">
               <!-- FIXME -->
-              <a href="{{credentialSubject.circularityScorecard.recyclingInformation}}" class="cards-traceability">
+              <a href="{{credentialSubject.circularityScorecard.recyclingInformation.linkURL}}" class="cards-traceability">
                 <div class="div-4">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21.82 15.42L19.32 19.75C18.83 20.61 17.92 21.06 17 21H15V23L12.5 18.5L15 14V16H17.82L15.6 12.15L19.93 9.65L21.73 12.77C22.25 13.54 22.32 14.57 21.82 15.42ZM9.21003 3.06H14.21C15.19 3.06 16.04 3.63 16.45 4.45L17.45 6.19L19.18 5.19L16.54 9.6L11.39 9.69L13.12 8.69L11.71 6.24L9.50003 10.09L5.16003 7.59L6.96003 4.47C7.37003 3.64 8.22003 3.06 9.21003 3.06ZM5.05003 19.76L2.55003 15.43C2.06003 14.58 2.13003 13.56 2.64003 12.79L3.64003 11.06L1.91003 10.06L7.05003 10.14L9.70003 14.56L7.97003 13.56L6.56003 16H11V21H7.40003C6.93154 21.0339 6.46293 20.9357 6.0475 20.7165C5.63206 20.4973 5.28648 20.1659 5.05003 19.76Z" fill="#1F5A95"/>
@@ -2030,7 +2062,7 @@
                 </div>
               </a>
               <!-- FIXME -->
-              <a href="{{credentialSubject.circularityScorecard.repairInformation}}" class="cards-traceability">
+              <a href="{{credentialSubject.circularityScorecard.repairInformation.linkURL}}" class="cards-traceability">
                 <div class="div-4">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18.85 21.975C18.7167 21.975 18.5917 21.9543 18.475 21.913C18.3583 21.8717 18.25 21.8007 18.15 21.7L13.05 16.6C12.95 16.5 12.879 16.3917 12.837 16.275C12.795 16.1583 12.7743 16.0333 12.775 15.9C12.7757 15.7667 12.7967 15.6417 12.838 15.525C12.8793 15.4083 12.95 15.3 13.05 15.2L15.175 13.075C15.275 12.975 15.3833 12.9043 15.5 12.863C15.6167 12.8217 15.7417 12.8007 15.875 12.8C16.0083 12.7993 16.1333 12.8203 16.25 12.863C16.3667 12.9057 16.475 12.9763 16.575 13.075L21.675 18.175C21.775 18.275 21.846 18.3833 21.888 18.5C21.93 18.6167 21.9507 18.7417 21.95 18.875C21.9493 19.0083 21.9287 19.1333 21.888 19.25C21.8473 19.3667 21.7763 19.475 21.675 19.575L19.55 21.7C19.45 21.8 19.3417 21.871 19.225 21.913C19.1083 21.955 18.9833 21.9757 18.85 21.975ZM18.85 19.6L19.575 18.875L15.9 15.2L15.175 15.925L18.85 19.6ZM5.125 22C4.99167 22 4.86267 21.975 4.738 21.925C4.61333 21.875 4.50067 21.8 4.4 21.7L2.3 19.6C2.2 19.5 2.125 19.3873 2.075 19.262C2.025 19.1367 2 19.008 2 18.876C2 18.744 2.025 18.619 2.075 18.501C2.125 18.383 2.2 18.2747 2.3 18.176L7.6 12.876H9.725L10.575 12.026L6.45 7.9H5.025L2 4.875L4.825 2.05L7.85 5.075V6.5L11.975 10.625L14.875 7.725L13.8 6.65L15.2 5.25H12.375L11.675 4.55L15.225 1L15.925 1.7V4.525L17.325 3.125L20.875 6.675C21.1583 6.95833 21.375 7.27933 21.525 7.638C21.675 7.99667 21.75 8.37567 21.75 8.775C21.75 9.17433 21.675 9.55767 21.525 9.925C21.375 10.2923 21.1583 10.6173 20.875 10.9L18.75 8.775L17.35 10.175L16.3 9.125L11.125 14.3V16.4L5.825 21.7C5.725 21.8 5.61667 21.875 5.5 21.925C5.38333 21.975 5.25833 22 5.125 22ZM5.125 19.6L9.375 15.35V14.625H8.65L4.4 18.875L5.125 19.6ZM5.125 19.6L4.4 18.875L4.775 19.225L5.125 19.6Z" fill="#1F5A95"/>
@@ -2104,65 +2136,65 @@
             </div>
           </div>
         </div>
+
         <div class="div-2">
           <div class="text-wrapper-14">Declarations</div>
+          <!-- FIXME -->
+          {{#each credentialSubject.conformityDeclarations}}
           <div class="frame-14">
             <div class="frame-15">
               <!-- FIXME -->
-              <div class="environment">{{credentialSubject.conformityTopic}}</div>
+              <div class="environment">{{conformityTopic}}</div>
               <!-- FIXME -->
-              <p class="text-wrapper-15">{{credentialSubject.conformityEvidence.linkName}}</p>
+              <p class="text-wrapper-15">{{conformityEvidence.linkName}}</p>
             </div>
-            <!-- FIXME -->
-            {{#each credentialSubject.conformityDeclarations}}
-            <div class="frame-16">
-              <!-- FIXME -->
-              {{#each declaredValues}}
-              <div class="frame-17">
-                <div class="div-5">
-                  <div class="data-two-columns">
-                    <div class="text-wrapper-12">Name</div>
-                    <!-- FIXME -->
-                    <div class="data-wrapper"><div class="data">{{metricName}}</div></div>
+
+            <div class="frame-29">
+              <p class="text-wrapper-18">Declared values</p>
+              <div class="frame-16">
+                <!-- FIXME -->
+                {{#each declaredValues}}
+                  <div class="frame-17">
+                    <div class="div-5">
+                      <div class="data-two-columns">
+                        <div class="text-wrapper-12">Name</div>
+                        <!-- FIXME -->
+                        <div class="data-wrapper"><div class="data">{{metricName}}</div></div>
+                      </div>
+                      <div class="data-two-columns">
+                        <div class="text-wrapper-12">Value</div>
+                        <!-- FIXME -->
+                        <div class="data-wrapper"><div class="data">{{metricValue.value}}{{metricValue.unit}}</div></div>
+                      </div>
+                      <div class="data-two-columns">
+                        <div class="text-wrapper-12">Accuracy</div>
+                        <!-- FIXME -->
+                        <div class="data-wrapper"><div class="data">{{accuracy}}</div></div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="data-two-columns">
-                    <div class="text-wrapper-12">Value</div>
-                    <!-- FIXME -->
-                    <div class="data-wrapper"><div class="data">{{metricValue.value}}{{metricValue.unit}}</div></div>
-                  </div>
-                  <div class="data-two-columns">
-                    <div class="text-wrapper-12">Accuracy</div>
-                    <!-- FIXME -->
-                    <div class="data-wrapper"><div class="data">{{accuracy}}</div></div>
-                  </div>
-                </div>
-                <!-- <p class="text-wrapper-16">*Industry Average emissions intensity: 1.8</p> -->
+                {{/each}}
               </div>
-              {{/each}}
+            </div>
+
+            <div class="frame-29">
+              <p class="text-wrapper-18">Assessment Criteria</p>
               <!-- FIXME -->
               {{#each assessmentCriteria}}
-              <!-- FIXME -->
-              <p class="text-wrapper-16">*{{name}}: {{thresholdValues.0.metricValue.value}}</p>
+              <div class="assessment-criteria-list">
+                <ul class="assessment-criteria-item">
+                  <li>
+                      Industry average {{name}} is <span>{{thresholdValues.0.metricValue.value}}{{thresholdValues.0.metricValue.unit}}</span>.
+                      <div><a href="{{id}}" class="blue-bottom-line">Assessment criteria</a></div>
+                  </li>
+                </ul>
+              </div>
               {{/each}}
             </div>
-            {{/each}}
+
             <div class="frame-20">
               <!-- FIXME -->
-              <a href="{{credentialSubject.conformityDeclarations.0.assessmentCriteria.0.id}}" class="cards-traceability-2">
-                <div class="frame-21">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM5 5V19H19V5H17V12L14.5 10.5L12 12V5H5Z" fill="#1F5A95"></path>
-                    </svg>
-                  <div class="frame-10"><div class="company-name">Assessment criteria</div></div>
-                </div>
-                <div class="div-4">
-                  <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L8 8L1 15" stroke="#1F5A95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                    
-                </div>
-              </a>
-              <!-- FIXME -->
-              <a href="{{credentialSubject.conformityDeclarations.0.conformityEvidence.0.linkURL}}" class="cards-traceability-2">
+              <a href="{{conformityEvidence.linkURL}}" class="cards-traceability-2">
                 <div class="frame-21">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM5 5V19H19V5H17V12L14.5 10.5L12 12V5H5Z" fill="#1F5A95"></path>
@@ -2181,19 +2213,21 @@
               <div class="frame-23">
                 <p class="div-6">
                   <!-- FIXME -->
-                  <span class="text-wrapper-17">Administered in {{credentialSubject.conformityDeclarations.0.referenceRegulation.jurisdictionCountry}} by <a href="{{credentialSubject.conformityDeclarations.0.referenceRegulation.administeredBy.id}}" class="black-line">{{credentialSubject.conformityDeclarations.0.referenceRegulation.administeredBy.name}}</a> Issued by <a href="{{credentialSubject.conformityDeclarations.0.referenceStandard.id}}" class="black-line">{{credentialSubject.conformityDeclarations.0.referenceStandard.name}}</a>, 2024</span>
+                  <span class="text-wrapper-17">Administered in {{referenceRegulation.jurisdictionCountry}} by <a href="{{referenceRegulation.administeredBy.id}}" class="black-line">{{referenceRegulation.administeredBy.name}}</a> Issued by <a href="{{referenceStandard.issuingParty.id}}" class="black-line">{{referenceStandard.issuingParty.name}}</a>, 2024</span>
                 </p>
               </div>
             </div>
           </div>
+          {{/each}}
         </div>
+
         <div class="div-2">
           <div class="typography-heading"><div class="text-wrapper-4">Production</div></div>
           <div class="div-5">
             <div class="data-two-columns">
               <div class="text-wrapper-12">Product category</div>
               <!-- FIXME -->
-              <div class="data-data"><div class="data-2">{{credentialSubject.productCategory.0.name}}</div></div>
+              <div class="data-data"><div class="data-2">{{#each credentialSubject.productCategory}}{{name}}{{/each}}</div></div>
             </div>
             <div class="data-two-columns">
               <div class="text-wrapper-12">Produced by</div>
@@ -2225,13 +2259,13 @@
             <div class="data-two-columns">
               <div class="text-wrapper-12">Dimensions</div>
               <!-- FIXME -->
-              <div class="data-data"><p class="data">{{credentialSubject.dimensions}}</p></div>
+              <div class="data-data"><p class="data">{{credentialSubject.dimensions.length.value}}{{credentialSubject.dimensions.length.unit}} x {{credentialSubject.dimensions.width.value}}{{credentialSubject.dimensions.width.unit}} x {{credentialSubject.dimensions.height.value}}{{credentialSubject.dimensions.height.unit}}</p></div>
             </div>
           </div>
         </div>
 
         <!-- FIXME: characteristics?????  -->
-        <div class="frame-24">
+        {{!-- <div class="frame-24">
           <div class="heading-wrapper"><div class="heading">Product data</div></div>
           <div class="div-5">
             <div class="data-two-columns">
@@ -2251,7 +2285,7 @@
               <div class="data-wrapper"><div class="data">100kwh</div></div>
             </div>
           </div>
-        </div>
+        </div> --}}
 
         <div class="div-2">
           <div class="typography-heading"><div class="text-wrapper-4">Composition</div></div>
@@ -2272,11 +2306,11 @@
                   <div class="frame-25">
                     <div class="frame-26">
                       <!-- FIXME -->
-                      <div class="text-wrapper-19">{{recycledAmount}}</div>
+                      <div class="text-wrapper-19">Recycled {{recycledAmount}}</div>
                     </div>
                     <div class="frame-27">
                       <!-- FIXME -->
-                      <div class="text-wrapper-19">{{hazardous}}</div>
+                      <div class="text-wrapper-19">Hazard {{hazardous}}</div>
                     </div>
                   </div>
                   <div class="data-data-link-2">
