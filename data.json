@@ -1,0 +1,187 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://vocabulary.uncefact.org/untp/dpp/0.3.10/"
+  ],
+  "type": ["DigitalProductPassport", "VerifiableCredential"],
+  "id": "https://example-company.com/credentials/2a423366-a0d6-4855-ba65-2e0c926d09b0",
+  "issuer": {
+    "type": ["CredentialIssuer"],
+    "id": "did:web:identifiers.example-company.com:12345",
+    "name": "Example Company Pty Ltd",
+    "otherIdentifiers": [
+      {
+        "type": ["Entity"],
+        "id": "https://abr.business.gov.au/ABN/View?abn=90664869327",
+        "name": "Example Company Pty Ltd",
+        "registeredId": "90664869327",
+        "idScheme": {
+          "type": ["IdentifierScheme"],
+          "id": "https://business.gov.au/abn",
+          "name": "ABN"
+        }
+      }
+    ]
+  },
+  "validFrom": "2024-03-15T12:00:00",
+  "validUntil": "2034-03-15T12:00:00",
+  "credentialSubject": {
+    "type": ["Product", "Entity"],
+    "id": "https://id.gs1.org/01/09520123456788/21/12345",
+    "name": "EV battery 300Ah",
+    "registeredId": "12345678",
+    "idScheme": {
+      "type": ["IdentifierScheme"],
+      "id": "https://id.gs1.org/01/",
+      "name": "Global Trade Identification Number (GTIN)"
+    },
+    "serialNumber": "67890",
+    "batchNumber": "45678",
+    "productImage": {
+      "type": ["Link"],
+      "linkURL": "https://files.example-company.com/images/battery.jpg",
+      "linkName": "Battery Product Image",
+      "linkType": "https://test.uncefact.org/vocabulary/linkTypes/image"
+    },
+    "description": "400Ah 24v LiFePO4 battery",
+    "productCategory": [
+      {
+        "type": ["Classification"],
+        "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
+        "code": "46410",
+        "name": "Primary cells and primary batteries",
+        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+        "schemeName": "UN Central Product Classification (CPC)"
+      }
+    ],
+    "furtherInformation": [
+      {
+        "type": ["Link"],
+        "linkURL": "https://example-company.com/product/ev-battery-info",
+        "linkName": "Product Information",
+        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/document"
+      }
+    ],
+    "producedByParty": {
+      "type": ["Entity"],
+      "id": "did:web:facilities.example-company.com:6789",
+      "name": "Greenacres Battery Factory",
+      "registeredId": "67890",
+      "idScheme": {
+        "type": ["IdentifierScheme"],
+        "id": "https://business.gov.au/abn",
+        "name": "ABN"
+      }
+    },
+    "dimensions": {
+      "type": ["Dimension"],
+      "weight": {
+        "type": ["Measure"],
+        "value": 24,
+        "unit": "KGM"
+      },
+      "length": {
+        "type": ["Measure"],
+        "value": 840,
+        "unit": "MMT"
+      },
+      "width": {
+        "type": ["Measure"],
+        "value": 150,
+        "unit": "MMT"
+      },
+      "height": {
+        "type": ["Measure"],
+        "value": 220,
+        "unit": "MMT"
+      }
+    },
+    "productionDate": "2024-04-25",
+    "countryOfProduction": "AU",
+    "materialsProvenance": [
+      {
+        "type": ["Material"],
+        "name": "Lithium Spodumene",
+        "originCountry": "AU",
+        "massFraction": 0.6,
+        "recycledAmount": 0.2,
+        "hazardous": false
+      }
+    ],
+    "conformityDeclarations": [
+      {
+        "type": ["Declaration"],
+        "id": "https://products.example-company.com/09520123456788/declarations/12345",
+        "referenceStandard": {
+          "type": ["Standard"],
+          "id": "https://www.iso.org/standard/60857.html",
+          "name": "ISO 14000 Environmental Management",
+          "issuingParty": {
+            "type": ["Entity"],
+            "id": "did:web:iso.org",
+            "name": "International Organization for Standardization"
+          }
+        },
+        "compliance": true,
+        "conformityTopic": "environment.energy",
+        "conformityEvidence": {
+          "type": ["SecureLink"],
+          "linkURL": "https://files.example-certifier.com/1234567.json",
+          "linkName": "ISO Compliance Certificate",
+          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+          "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+          "hashMethod": "SHA-256",
+          "encryptionMethod": "AES"
+        }
+      }
+    ],
+    "circularityScorecard": {
+      "type": ["CircularityPerformance"],
+      "recyclingInformation": {
+        "type": ["Link"],
+        "linkURL": "https://example-company.com/recycling-info",
+        "linkName": "Recycling Information",
+        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/recycling"
+      },
+      "repairInformation": {
+        "type": ["Link"],
+        "linkURL": "https://example-company.com/repair-info",
+        "linkName": "Repair Instructions",
+        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/repair"
+      },
+      "recyclableContent": 0.8,
+      "recycledContent": 0.4,
+      "utilityFactor": 1.5,
+      "materialCircularityIndicator": 0.75
+    },
+    "emissionsScorecard": {
+      "type": ["EmissionsPerformance"],
+      "carbonFootprint": 1.8,
+      "declaredUnit": "KGM",
+      "operationalScope": "CradleToGate",
+      "primarySourcedRatio": 0.5,
+      "reportingStandard": {
+        "type": ["Standard"],
+        "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf",
+        "name": "GBA Battery Passport Greenhouse Gas Rulebook - V.2.0",
+        "issuingParty": {
+          "type": ["Entity"],
+          "id": "did:web:globalbattery.org",
+          "name": "Global Battery Alliance"
+        },
+        "issueDate": "2023-12-05"
+      }
+    },
+    "traceabilityInformation": [
+      {
+        "type": ["SecureLink"],
+        "linkURL": "https://traceability.example.com/events/789123",
+        "linkName": "EPCIS Event Data",
+        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/traceability",
+        "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+        "hashMethod": "SHA-256",
+        "encryptionMethod": "AES"
+      }
+    ]
+  }
+}
