@@ -3,8 +3,8 @@ const express = require('express');
 const fs = require('fs/promises');
 
 // Change the templateFileName and dataFileName to the path of your Handlebars template and data files
-const templateFileName = process.env.TEMPLATE || 'hbs-templates/0.3.10/dpp.hbs';
-const dataFileName = process.env.FILE || 'hbs-templates/0.3.10/dpp.json';
+const templateFileName = process.env.TEMPLATE || 'hbs-templates/0.3.10/te-transformation-event.hbs';
+const dataFileName = process.env.FILE || 'hbs-templates/0.3.10/te-transformation-event.json';
 
 const app = express();
 
