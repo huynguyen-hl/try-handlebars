@@ -259,6 +259,12 @@
         "linkName": "Recycling Information",
         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/recycling"
       },
+      "repairInformation": {
+        "type": ["Link"],
+        "linkURL": "https://example-company.com/repair-info",
+        "linkName": "Repair Information",
+        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/repair"
+      },
       "recyclableContent": 0.8,
       "recycledContent": 0.4,
       "utilityFactor": 1.5,
@@ -283,6 +289,51 @@
       }
     },
     "traceabilityInformation": [
+      {
+        "type": ["SecureLink"],
+        "linkURL": "https://traceability.example.com/events/789123",
+        "linkName": "EPCIS Event Data",
+        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/traceability",
+        "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+        "hashMethod": "SHA-256",
+        "encryptionMethod": "AES"
+      },
+      {
+        "type": ["SecureLink"],
+        "linkURL": "https://traceability.example.com/events/789123",
+        "linkName": "EPCIS Event Data",
+        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/traceability",
+        "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+        "hashMethod": "SHA-256",
+        "encryptionMethod": "AES"
+      },
+      {
+        "type": ["SecureLink"],
+        "linkURL": "https://traceability.example.com/events/789123",
+        "linkName": "EPCIS Event Data",
+        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/traceability",
+        "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+        "hashMethod": "SHA-256",
+        "encryptionMethod": "AES"
+      },
+      {
+        "type": ["SecureLink"],
+        "linkURL": "https://traceability.example.com/events/789123",
+        "linkName": "EPCIS Event Data",
+        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/traceability",
+        "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+        "hashMethod": "SHA-256",
+        "encryptionMethod": "AES"
+      },
+      {
+        "type": ["SecureLink"],
+        "linkURL": "https://traceability.example.com/events/789123",
+        "linkName": "EPCIS Event Data",
+        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/traceability",
+        "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+        "hashMethod": "SHA-256",
+        "encryptionMethod": "AES"
+      },
       {
         "type": ["SecureLink"],
         "linkURL": "https://traceability.example.com/events/789123",
