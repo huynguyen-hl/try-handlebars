@@ -1,0 +1,51 @@
+{
+  "transaction": {
+    "identifier": "010935950200001010ACB123",
+    "type": "cert",
+    "documentURL": "http://localhost"
+  },
+  "itemList": [
+    {
+      "name": "item name",
+      "itemID": "http://localhost:8080/gtin/09359502000010/10/ACB123?linkType=gs1:certificationInfo"
+    }
+  ],
+  "eventType": "transaction",
+  "actionCode": "observe",
+  "eventTime": "2024-06-20T08:34:18.799Z",
+  "eventID": "6fd3f325-c3f1-48cb-b4f7-f08dfc0d163a",
+  "sourceParty": {
+    "partyID": "http://localhost",
+    "name": "source test"
+  },
+  "destinationParty": {
+    "partyID": "http://localhost",
+    "name": "destination test"
+  },
+  "quantityList": [
+    {
+      "quantity": "10",
+      "productClass": "Product Class test",
+      "uom": "kg"
+    }
+  ],
+  "dispositionCode": "disposed",
+  "businessStepCode": "inspecting",
+  "readPointId": "123",
+  "locationId": "http://localhost/location",
+  "certification": [
+    {
+      "certificateID": "321",
+      "referenceStandard": "http://localhost",
+      "evidenceURL": "http://localhost",
+      "criteriaList": [
+        "http://localhost"
+      ],
+      "assessmentLevel": "self-assessed",
+      "responsibleAgency": {
+        "partyID": "http://localhost",
+        "name": "agency name test"
+      }
+    }
+  ]
+}

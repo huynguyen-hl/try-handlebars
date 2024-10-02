@@ -1,0 +1,136 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://vocabulary.uncefact.org/untp/dpp/0.3.10/"
+  ],
+  "type": ["DigitalProductPassport", "VerifiableCredential"],
+  "id": "https://example-company.com/credentials/2a423366-a0d6-4855-ba65-2e0c926d09b0",
+  "issuer": {
+    "type": ["CredentialIssuer"],
+    "id": "did:web:identifiers.example-company.com:12345",
+    "name": "Example Company Pty Ltd",
+    "otherIdentifiers": [
+      {
+        "type": ["Entity"],
+        "id": "https://abr.business.gov.au/ABN/View?abn=90664869327",
+        "name": "Example Company Pty Ltd",
+        "registeredId": "90664869327",
+        "idScheme": {
+          "type": ["IdentifierScheme"],
+          "id": "https://business.gov.au/abn",
+          "name": "ABN"
+        }
+      }
+    ]
+  },
+  "validFrom": "08 July 2023",
+  "validUntil": "07 July 2025",
+  "credentialSubject": {
+    "type": ["AssociationEvent", "Event"],
+    "id": "https://events.sample.com/b681df10-c682-454a-b11b-d0b9374c01bd",
+    "eventTime": "2024-09-01T12:00:00",
+    "action": "add",
+    "disposition": "https://ref.gs1.org/cbv/Disp#assembled",
+    "bizStep": "Assembling",
+    "bizLocation": "https://id.gs1.org/414/9520123456788",
+    "sensorElementList": [
+      {
+        "type": ["SensorElement"],
+        "sensorMetadata": {
+          "type": ["Sensor"],
+          "device": {
+            "type": ["Item", "Entity"],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "Assembly Line Sensor",
+            "registeredId": "54321",
+            "idScheme": {
+              "type": ["IdentifierScheme"],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            }
+          },
+          "dataProcessingMethod": "https://standards.org/sensorMethod#1234"
+        },
+        "sensorReport": [
+          {
+            "type": ["SensorData"],
+            "time": "2024-07-24T12:00:00",
+            "sensorType": "https://samplesensors.com/model1234",
+            "value": 22,
+            "uom": "CEL"
+          }
+        ],
+        "sensorIntegrityProof": "https://sensorManufacturer.com/integrityProof/abc123"
+      }
+    ],
+    "parentEPC": {
+      "type": ["Item", "Entity"],
+      "id": "https://id.gs1.org/01/09520123456788/21/54321",
+      "name": "Final Product Assembly",
+      "registeredId": "54321",
+      "idScheme": {
+        "type": ["IdentifierScheme"],
+        "id": "https://id.gs1.org/01/",
+        "name": "Global Trade Identification Number (GTIN)"
+      }
+    },
+    "childEPCs": [
+      {
+        "type": ["Item", "Entity"],
+        "id": "https://id.gs1.org/01/09520123456788/21/67890",
+        "name": "Component A",
+        "registeredId": "67890",
+        "idScheme": {
+          "type": ["IdentifierScheme"],
+          "id": "https://id.gs1.org/01/",
+          "name": "Global Trade Identification Number (GTIN)"
+        }
+      },
+      {
+        "type": ["Item", "Entity"],
+        "id": "https://id.gs1.org/01/09520123456788/21/13579",
+        "name": "Component B",
+        "registeredId": "13579",
+        "idScheme": {
+          "type": ["IdentifierScheme"],
+          "id": "https://id.gs1.org/01/",
+          "name": "Global Trade Identification Number (GTIN)"
+        }
+      }
+    ],
+    "childQuantityList": [
+      {
+        "type": ["QuantityElement"],
+        "product": {
+          "type": ["Entity"],
+          "id": "https://id.gs1.org/01/09520123456788",
+          "name": "Metal Screws",
+          "registeredId": "98765",
+          "idScheme": {
+            "type": ["IdentifierScheme"],
+            "id": "https://id.gs1.org/01/",
+            "name": "Global Trade Identification Number (GTIN)"
+          }
+        },
+        "quantity": 50,
+        "uom": "EA"
+      },
+      {
+        "type": ["QuantityElement"],
+        "product": {
+          "type": ["Entity"],
+          "id": "https://id.gs1.org/01/09520123456788",
+          "name": "Plastic Components",
+          "registeredId": "24680",
+          "idScheme": {
+            "type": ["IdentifierScheme"],
+            "id": "https://id.gs1.org/01/",
+            "name": "Global Trade Identification Number (GTIN)"
+          }
+        },
+        "quantity": 30,
+        "uom": "EA"
+      }
+    ]
+  }
+}

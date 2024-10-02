@@ -1,0 +1,185 @@
+{
+  "credentialSubject": {
+    "product": {
+      "productIdentifiers": [
+        {
+          "identifierValue": "010935950200001010ACB123",
+          "verificationEvidence": {
+            "credentialReference": "http://localhost",
+            "format": "w3c_vc",
+            "assuranceLevel": "Self"
+          },
+          "identifierURI": "http://localhost",
+          "scheme": "http://localhost"
+        }
+      ],
+      "itemIdentifiers": [
+        {
+          "identifierValue": "010935950200001010ACB123",
+          "verificationEvidence": {
+            "assuranceLevel": "Self",
+            "format": "w3c_vc",
+            "credentialReference": "http://localhost"
+          },
+          "identifierURI": "http://localhost",
+          "scheme": "http://localhost"
+        }
+      ],
+      "batchIdentifiers": [
+        {
+          "identifierValue": "010935950200001010ACB123",
+          "verificationEvidence": {
+            "credentialReference": "http://localhost",
+            "format": "w3c_vc",
+            "assuranceLevel": "Self"
+          },
+          "identifierURI": "http://localhost",
+          "scheme": "http://localhost"
+        }
+      ],
+      "traceabilityInformation": [
+        {
+          "eventReference": "https://event-reference.com/event/1",
+          "eventType": "object"
+        }
+      ],
+      "recyclingInstructions": "recycling instructions",
+      "conformityClaims": [
+        {
+          "conformityEvidence": {
+            "credentialReference": "https://credential-reference.com/1",
+            "assuranceLevel": "Self",
+            "format": "w3c_vc"
+          },
+          "conformance": true,
+          "benchmarkReference": "https://benchmark-reference.com/1",
+          "benchmarkValue": {
+            "name": "benchmark test",
+            "value": 55,
+            "accuracy": 90,
+            "unit": "kg"
+          },
+          "claimedValues": [
+            {
+              "name": "Claimed Values test",
+              "value": 44,
+              "accuracy": 100,
+              "unit": "%"
+            }
+          ],
+          "criteriaReference": "https://criteria-reference.com/1",
+          "standardOrRegulation": "Best standard ",
+          "topic": "environment.energy"
+        }
+      ],
+      "materialsProvenance": [
+        {
+          "originCountry": "origin country test",
+          "materialType": {
+            "scheme": "http://localhost",
+            "classifierValue": "123",
+            "classifierName": "Aspep test",
+            "classifierURL": "http://localhost"
+          },
+          "hazardous": true,
+          "recycled": true
+        }
+      ],
+      "manufacturedAt": {
+        "operatedBy": {
+          "name": "Test name",
+          "identifiers": [
+            {
+              "scheme": "http://localhost",
+              "identifierValue": "test value",
+              "identifierURI": "http://localhost"
+            }
+          ]
+        },
+        "location": "http://localhost/location",
+        "name": "test facility",
+        "identifiers": [
+          {
+            "scheme": "http://localhost",
+            "identifierValue": "id 1",
+            "identifierURI": "http://localhost",
+            "verificationEvidence": {
+              "format": "w3c_vc",
+              "assuranceLevel": "Self",
+              "credentialReference": "http://localhost"
+            }
+          }
+        ]
+      },
+      "manufacturer": {
+        "name": "Manufacturer test",
+        "identifiers": [
+          {
+            "identifierURI": "http://localhost",
+            "scheme": "http://localhost",
+            "identifierValue": "010935950200001010ACB123",
+            "verificationEvidence": {
+              "format": "w3c_vc",
+              "assuranceLevel": "Self",
+              "credentialReference": "http://localhost"
+            }
+          }
+        ]
+      },
+      "dimensions": {
+        "weight": {
+          "value": 4,
+          "unit": "kg"
+        },
+        "length": {
+          "value": 4,
+          "unit": "m2"
+        },
+        "width": {
+          "value": 5,
+          "unit": "m2"
+        },
+        "height": {
+          "value": 6,
+          "unit": "m2"
+        },
+        "volume": {
+          "value": 45,
+          "unit": "kg"
+        }
+      },
+      "manufacturedDate": "2024-06-20",
+      "furtherInformation": "test",
+      "description": "test description",
+      "modelName": "test model name",
+      "image": "https://s3-alpha-sig.figma.com/img/c125/66a2/df832b7c75e18b6376bce7e541b6353f?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f2x4W1QBnwr6NEAAnMsMhOSzbOaampmrYsMK-9mntGJLMHZbgcHijWdnXF9FSZlaGWURosOznYVUDWcAMYI9xERDWpQJ8zbmAxGaaEVSnGQejYHeGsZnogao3jt7ilLUeJDxYCvzyLS~aglCrmZhAyWomeG5TrzcN1F-r4lu~UucgkRMlm3l24GtHI~4pMyy75Qn5C~h9W1211P9aPqOVl~21dNEW~9VYK9yp2Zpx9KoKjljvNJYoGsM7C~Wg4JuN7uwCQWkLiDwGKDfCMtcTrP95xl4fpaR0QfHqMbu3mPlA7fSxxNzHfBE4EKQSoCc8Gqw0Sg7yWKQlCqO9HNLsQ__",
+      "classifications": [
+        {
+          "scheme": "http://localhost",
+          "classifierURL": "http://localhost",
+          "classifierName": "Classifier Name test",
+          "classifierValue": "Classifier Value test"
+        }
+      ]
+    },
+    "sustainabilityScore": 55,
+    "trustScore": 66,
+    "guaranteeOfOriginCredential": "guarantee of original crendetial test",
+    "issuedBy": {
+      "name": "Issued By test",
+      "identifiers": [
+        {
+          "scheme": "http://localhost",
+          "identifierURI": "http://localhost",
+          "verificationEvidence": {
+            "credentialReference": "http://localhost",
+            "assuranceLevel": "Self",
+            "format": "w3c_vc"
+          },
+          "identifierValue": "010935950200001010ACB123"
+        }
+      ]
+    },
+    "id": "http://localhost/id/1"
+  }
+}

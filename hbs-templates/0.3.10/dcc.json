@@ -1,0 +1,465 @@
+{
+  "type": [
+    "DigitalConformityCredential",
+    "VerifiableCredential"
+  ],
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://vocabulary.uncefact.org/untp/dcc/0.3.10/"
+  ],
+  "id": "https://example-company.com/credentials/2a423366-a0d6-4855-ba65-2e0c926d09b0",
+  "issuer": {
+    "type": [
+      "CredentialIssuer"
+    ],
+    "id": "did:web:identifiers.example-company.com:12345",
+    "name": "Example Company Pty Ltd",
+    "otherIdentifiers": [
+      {
+        "type": [
+          "Entity"
+        ],
+        "id": "https://id.gs1.org/01/09520123456788/21/12345",
+        "name": "EV battery 300Ah",
+        "registeredId": "90664869327",
+        "idScheme": {
+          "type": [
+            "IdentifierScheme"
+          ],
+          "id": "https://id.gs1.org/01/",
+          "name": "Global Trade Identification Number (GTIN)"
+        }
+      }
+    ]
+  },
+  "validFrom": "12:32pm 28/03/2023",
+  "validUntil": "12:32pm 28/03/2028",
+  "description": "A conformity attestation issued by a competent body that defines one or more assessments (e.g., carbon intensity) about a product (e.g., battery) against a specification (e.g., LCA method) defined in a standard or regulation.",
+  "credentialSubject": {
+    "type": [
+      "ConformityAttestation",
+      "Attestation"
+    ],
+    "id": "https://exampleCAB.com/38f73303-a39e-45a7-b8b7-e73517548f27",
+    "name": "Carbon Lifecycle assessment 12345567",
+    "assessorLevel": "Self",
+    "assessmentLevel": "GovtApproval",
+    "attestationType": "certification",
+    "attestationDescription": "SampleCAB Inc attests that the product class LiFePO4 EV batteries manufactured at Sample battery facility have reported GHG footprint that conform to the GBA rulebook version 1.5.",
+    "issuedToParty": {
+      "type": [
+        "Entity"
+      ],
+      "id": "https://id.gs1.org/01/09520123456788/21/12345",
+      "name": "EV battery 300Ah",
+      "registeredId": "90664869327",
+      "idScheme": {
+        "type": [
+          "IdentifierScheme"
+        ],
+        "id": "https://id.gs1.org/01/",
+        "name": "Global Trade Identification Number (GTIN)"
+      }
+    },
+    "authorisations": [
+      {
+        "type": [
+          "Endorsement"
+        ],
+        "id": "https://authority.gov/schemeABC/123456789",
+        "name": "Accreditation of certifiers.com under the Australian National Greenhouse and Energy Reporting scheme (NGER) and Energy Reporting scheme (NGER)",
+        "issuingAuthority": {
+          "type": [
+            "Entity"
+          ],
+          "id": "https://abr.business.gov.au/ABN/View?abn=90664869327",
+          "name": "Australian Government"
+        },
+        "accreditationCertificate": {
+          "type": [
+            "Link"
+          ],
+          "linkURL": "https://files.example-certifier.com/1234567.json",
+          "linkName": "Accreditation Certificate",
+          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc"
+        }
+      }
+    ],
+    "conformityCertificate": {
+      "type": [
+        "SecureLink",
+        "Link"
+      ],
+      "linkURL": "https://files.example-certifier.com/conformity-certificate.pdf",
+      "linkName": "Conformity Certificate",
+      "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+      "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+      "hashMethod": "SHA-256",
+      "encryptionMethod": "none"
+    },
+    "auditableEvidence": {
+      "type": [
+        "SecureLink",
+        "Link"
+      ],
+      "linkURL": "https://files.example-certifier.com/audit-evidence.zip",
+      "linkName": "Audit Evidence",
+      "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+      "hashDigest": "8f9119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+      "hashMethod": "SHA-256",
+      "encryptionMethod": "AES"
+    },
+    "scope": {
+      "type": [
+        "ConformityAssessmentScheme",
+        "Standard"
+      ],
+      "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf",
+      "name": "GBA Battery Passport Greenhouse Gas Rulebook - V.2.0",
+      "issuingParty": {
+        "type": [
+          "Entity"
+        ],
+        "id": "https://id.gs1.org/01/09520123456788/21/12345",
+        "name": "Global Battery Alliance"
+      },
+      "issueDate": "2023-12-05",
+      "trustmark": {
+        "type": [
+          "BinaryFile"
+        ],
+        "fileName": "GHG protocol trust mark",
+        "fileType": "image/png",
+        "file": "iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAABGdBTUEAAi/9H3pWy6vI9uFdAAAAAElFTkSuQmCC"
+      }
+    },
+    "assessments": [
+      {
+        "type": [
+          "ConformityAssessment",
+          "Declaration"
+        ],
+        "id": "https://exampleCAB.com/38f73303-a39e-45a7-b8b7-e73517548f27/01",
+        "referenceStandard": {
+          "type": [
+            "Standard"
+          ],
+          "id": "https://www.iso.org/standard/60857.html",
+          "name": "ISO 14000",
+          "issuingParty": {
+            "type": [
+              "Entity"
+            ],
+            "id": "https://iso.org",
+            "name": "International Organization for Standardization"
+          },
+          "issueDate": "2023-12-05"
+        },
+        "referenceRegulation": {
+          "type": [
+            "Regulation"
+          ],
+          "id": "https://www.legislation.gov.au/F2008L02309/latest/versions",
+          "name": "National Greenhouse and Energy Reporting (Measurement) Determination",
+          "jurisdictionCountry": "AU",
+          "administeredBy": {
+            "type": [
+              "Entity"
+            ],
+            "id": "https://abr.business.gov.au/ABN/View?abn=90664869327",
+            "name": "Australian Government Department of Climate Change, Energy, the Environment and Water"
+          },
+          "effectiveDate": "2024-03-20"
+        },
+        "assessmentCriteria": [
+          {
+            "type": [
+              "Criterion"
+            ],
+            "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf#BatteryAssembly",
+            "name": "GBA Battery rule book v2.0 battery assembly guidelines GBA Battery rule book v2.0 battery assembly guidelines",
+            "thresholdValues": [
+              {
+                "type": [
+                  "Metric"
+                ],
+                "metricName": "GHG emissions intensity",
+                "metricValue": {
+                  "type": [
+                    "Measure"
+                  ],
+                  "value": 10,
+                  "unit": "KG"
+                },
+                "accuracy": 0.05
+              }
+            ]
+          },
+          {
+            "type": [
+              "Criterion"
+            ],
+            "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf#BatteryAssembly",
+            "name": "GBA Battery rule book v2.0 battery assembly guidelines.",
+            "thresholdValues": [
+              {
+                "type": [
+                  "Metric"
+                ],
+                "metricName": "GHG emissions intensity",
+                "metricValue": {
+                  "type": [
+                    "Measure"
+                  ],
+                  "value": 10,
+                  "unit": "KG"
+                },
+                "accuracy": 0.05
+              }
+            ]
+          }
+        ],
+        "declaredValues": [
+          {
+            "type": [
+              "Metric"
+            ],
+            "metricName": "GHG emissions intensity",
+            "metricValue": {
+              "type": [
+                "Measure"
+              ],
+              "value": 10,
+              "unit": "KG"
+            },
+            "accuracy": 0.05
+          },
+          {
+            "type": [
+              "Metric"
+            ],
+            "metricName": "GHG emissions intensity",
+            "metricValue": {
+              "type": [
+                "Measure"
+              ],
+              "value": 10,
+              "unit": "KG"
+            },
+            "accuracy": 0.05
+          }
+        ],
+        "compliance": true,
+        "conformityTopic": "environment.energy",
+        "assessedProducts": [
+          {
+            "type": [
+              "Product",
+              "Entity"
+            ],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "EV battery 300Ah",
+            "registeredId": "90664869327",
+            "idScheme": {
+              "type": [
+                "IdentifierScheme"
+              ],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            },
+            "IDverifiedByCAB": true
+          },
+          {
+            "type": [
+              "Product",
+              "Entity"
+            ],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "EV battery 300Ah",
+            "registeredId": "90664869327",
+            "idScheme": {
+              "type": [
+                "IdentifierScheme"
+              ],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            },
+            "IDverifiedByCAB": true
+          },
+          {
+            "type": [
+              "Product",
+              "Entity"
+            ],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "EV battery 300Ah",
+            "registeredId": "90664869327",
+            "idScheme": {
+              "type": [
+                "IdentifierScheme"
+              ],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            },
+            "IDverifiedByCAB": true
+          },
+          {
+            "type": [
+              "Product",
+              "Entity"
+            ],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "EV battery 300Ah",
+            "registeredId": "90664869327",
+            "idScheme": {
+              "type": [
+                "IdentifierScheme"
+              ],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            },
+            "IDverifiedByCAB": true
+          },
+          {
+            "type": [
+              "Product",
+              "Entity"
+            ],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "EV battery 300Ah",
+            "registeredId": "90664869327",
+            "idScheme": {
+              "type": [
+                "IdentifierScheme"
+              ],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            },
+            "IDverifiedByCAB": true
+          },
+          {
+            "type": [
+              "Product",
+              "Entity"
+            ],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "EV battery 300Ah",
+            "registeredId": "90664869327",
+            "idScheme": {
+              "type": [
+                "IdentifierScheme"
+              ],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            },
+            "IDverifiedByCAB": true
+          }
+        ],
+        "assessedFacilities": [
+          {
+            "type": [
+              "Facility",
+              "Entity"
+            ],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "Greenacres battery factory",
+            "registeredId": "90664869327",
+            "idScheme": {
+              "type": [
+                "IdentifierScheme"
+              ],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            },
+            "IDverifiedByCAB": true
+          },
+          {
+            "type": [
+              "Facility",
+              "Entity"
+            ],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "Greenacres battery factory",
+            "registeredId": "90664869327",
+            "idScheme": {
+              "type": [
+                "IdentifierScheme"
+              ],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            },
+            "IDverifiedByCAB": true
+          },
+          {
+            "type": [
+              "Facility",
+              "Entity"
+            ],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "Greenacres battery factory",
+            "registeredId": "90664869327",
+            "idScheme": {
+              "type": [
+                "IdentifierScheme"
+              ],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            },
+            "IDverifiedByCAB": true
+          },
+          {
+            "type": [
+              "Facility",
+              "Entity"
+            ],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "Greenacres battery factory",
+            "registeredId": "90664869327",
+            "idScheme": {
+              "type": [
+                "IdentifierScheme"
+              ],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            },
+            "IDverifiedByCAB": true
+          },
+          {
+            "type": [
+              "Facility",
+              "Entity"
+            ],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "Greenacres battery factory",
+            "registeredId": "90664869327",
+            "idScheme": {
+              "type": [
+                "IdentifierScheme"
+              ],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            },
+            "IDverifiedByCAB": true
+          },
+          {
+            "type": [
+              "Facility",
+              "Entity"
+            ],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "Greenacres battery factory",
+            "registeredId": "90664869327",
+            "idScheme": {
+              "type": [
+                "IdentifierScheme"
+              ],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            },
+            "IDverifiedByCAB": true
+          }
+        ]
+      }
+    ]
+  }
+}

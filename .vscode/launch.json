@@ -7,11 +7,37 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "render template",
       "program": "${workspaceFolder}/index.js",
       "runtimeExecutable": "nodemon",
       "restart": true,
-      "console": "integratedTerminal"
+      "console": "integratedTerminal",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "DPP",
+      "program": "${workspaceFolder}/index.js",
+      "runtimeExecutable": "nodemon",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "TEMPLATE": "hbs-templates/0.3.10/dpp.hbs",
+        "FILE": "hbs-templates/0.3.10/dpp.json"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "DCC",
+      "program": "${workspaceFolder}/index.js",
+      "runtimeExecutable": "nodemon",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "TEMPLATE": "hbs-templates/0.3.10/dcc.hbs",
+        "FILE": "hbs-templates/0.3.10/dcc.json"
+      }
     }
   ]
 }

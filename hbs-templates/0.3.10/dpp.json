@@ -107,6 +107,11 @@
         "unit": "MMT"
       }
     },
+    "characteristic": {
+      "color": "red",
+      "size": "L",
+      "weight": "1.2kg"
+    },
     "productionDate": "15 August 2024",
     "countryOfProduction": "AU",
     "materialsProvenance": [
@@ -278,51 +283,6 @@
       }
     },
     "traceabilityInformation": [
-      {
-        "type": ["SecureLink"],
-        "linkURL": "https://traceability.example.com/events/789123",
-        "linkName": "EPCIS Event Data",
-        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/traceability",
-        "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
-        "hashMethod": "SHA-256",
-        "encryptionMethod": "AES"
-      },
-      {
-        "type": ["SecureLink"],
-        "linkURL": "https://traceability.example.com/events/789123",
-        "linkName": "EPCIS Event Data",
-        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/traceability",
-        "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
-        "hashMethod": "SHA-256",
-        "encryptionMethod": "AES"
-      },
-      {
-        "type": ["SecureLink"],
-        "linkURL": "https://traceability.example.com/events/789123",
-        "linkName": "EPCIS Event Data",
-        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/traceability",
-        "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
-        "hashMethod": "SHA-256",
-        "encryptionMethod": "AES"
-      },
-      {
-        "type": ["SecureLink"],
-        "linkURL": "https://traceability.example.com/events/789123",
-        "linkName": "EPCIS Event Data",
-        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/traceability",
-        "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
-        "hashMethod": "SHA-256",
-        "encryptionMethod": "AES"
-      },
-      {
-        "type": ["SecureLink"],
-        "linkURL": "https://traceability.example.com/events/789123",
-        "linkName": "EPCIS Event Data",
-        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/traceability",
-        "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
-        "hashMethod": "SHA-256",
-        "encryptionMethod": "AES"
-      },
       {
         "type": ["SecureLink"],
         "linkURL": "https://traceability.example.com/events/789123",

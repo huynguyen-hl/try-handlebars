@@ -64,6 +64,7 @@
         font-weight: 400;
         line-height: 17.44px;
         color: #55606E;
+        text-transform: capitalize;
       }
       .item-value {
         display: flex;
@@ -106,7 +107,6 @@
       }
 
       .header-image {
-        position: relative;
         background: linear-gradient(248.36deg, rgba(0, 0, 0, 0.18) 7.6%, rgba(0, 0, 0, 0.6) 70.52%);
         background-image: var(--image-src);
         background-size: cover;
@@ -558,6 +558,14 @@
       }
 
       /* Media Queries for Mobiles */
+      @media (min-width: 50px) {
+        .container {
+          min-width: 390px;
+        }
+        .contents {
+          display: none;
+        }
+      }
       @media (min-width: 390px) {
         .container {
           min-width: 390px;
@@ -575,7 +583,6 @@
           display: flex;
           align-items: flex-start;
           gap: 10px;
-          position: relative;
           background-color: #ffffff;
           width: 100%;
         }
@@ -610,7 +617,6 @@
           display: flex;
           align-items: flex-start;
           gap: 10px;
-          position: relative;
           background-color: #ffffff;
           width: 100%;
           min-width: 1440px;
@@ -622,7 +628,6 @@
           flex-direction: column;
           align-items: center;
           gap: 40px;
-          position: relative;
           flex: 1;
           flex-grow: 1;
         }
@@ -633,14 +638,11 @@
           align-items: flex-start;
           gap: 16px;
           padding: 56px 200px 0px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
         }
 
         .container .PP-title {
-          position: relative;
           width: 300px;
           margin-top: -1px;
           font-weight: 500;
@@ -651,7 +653,6 @@
         }
 
         .container .text-wrapper {
-          position: relative;
           align-self: stretch;
           font-weight: 900;
           color: var(--black);
@@ -666,10 +667,8 @@
           align-items: flex-start;
           gap: 12px 12px;
           padding: 12px 12px 16px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
           background-color: var(--primary-colorsblue-10);
         }
 
@@ -677,8 +676,6 @@
           display: inline-flex;
           align-items: center;
           gap: 6px;
-          position: relative;
-          flex: 0 0 auto;
         }
 
         .container .line {
@@ -686,15 +683,12 @@
           display: inline-flex;
           align-items: flex-start;
           padding: 0px 0px 3px;
-          position: relative;
-          flex: 0 0 auto;
           border-bottom-width: 2px;
           border-bottom-style: solid;
           border-color: var(--primary-colorsblue-400);
         }
 
         .container .text-wrapper-2 {
-          position: relative;
           width: fit-content;
           margin-top: -2px;
           font-weight: 500;
@@ -709,12 +703,9 @@
           align-items: flex-start;
           gap: 10px;
           padding: 0px 0px 3px;
-          position: relative;
-          flex: 0 0 auto;
         }
 
         .container .text-wrapper-3 {
-          position: relative;
           width: fit-content;
           margin-top: -2px;
           font-weight: 500;
@@ -728,10 +719,8 @@
           display: flex;
           align-items: flex-start;
           gap: 16px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
         }
 
         .container .PP-header {
@@ -743,7 +732,6 @@
           justify-content: space-around;
           gap: 8px;
           padding: 32px 16px 20px;
-          position: relative;
           background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.6) 79.5%);
           background-image: var(--image-src);
           background-size: cover;
@@ -756,10 +744,8 @@
           align-items: flex-start;
           justify-content: flex-end;
           gap: 8px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
         }
 
         .container .frame-4 {
@@ -767,13 +753,11 @@
           flex-direction: column;
           align-items: flex-start;
           gap: 8px;
-          position: relative;
           flex: 1;
           flex-grow: 1;
         }
 
         .container .p {
-          position: relative;
           align-self: stretch;
           margin-top: -1px;
           font-weight: 300;
@@ -794,10 +778,8 @@
           align-items: flex-start;
           gap: 16px;
           padding: 0px 200px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
         }
 
         .container .typography-heading {
@@ -805,12 +787,9 @@
           align-items: center;
           justify-content: center;
           gap: 10px;
-          position: relative;
-          flex: 0 0 auto;
         }
 
         .container .text-wrapper-4 {
-          position: relative;
           width: fit-content;
           margin-top: -1px;
           font-weight: 700;
@@ -821,7 +800,6 @@
         }
 
         .container .text-wrapper-5 {
-          position: relative;
           align-self: stretch;
           font-weight: 400;
           color: var(--black);
@@ -848,8 +826,6 @@
           flex-direction: column;
           align-items: flex-start;
           gap: 12px;
-          position: relative;
-          flex: 0 0 auto;
         }
 
         .container .frame-6 {
@@ -858,8 +834,6 @@
           width: 510px;
           align-items: flex-start;
           gap: 0px 0px;
-          position: relative;
-          flex: 0 0 auto;
           margin-top: -1px;
           margin-left: -1px;
           margin-right: -1px;
@@ -875,7 +849,6 @@
           align-items: center;
           gap: 8px;
           padding: 12px 16px;
-          position: relative;
           flex: 1;
           flex-grow: 1;
         }
@@ -901,7 +874,6 @@
         }
 
         .container .rectangle {
-          position: relative;
           width: 1px;
           height: 112px;
           background-color: var(--primary-colorsgray-400);
@@ -910,7 +882,6 @@
 
         .container .rectangle-2 {
           width: 508px;
-          position: relative;
           height: 1px;
           background-color: var(--primary-colorsgray-400);
         }
@@ -922,7 +893,6 @@
           align-items: center;
           gap: 8px;
           padding: 12px 16px;
-          position: relative;
           flex: 1;
           flex-grow: 1;
           background-color: var(--primary-colorsblue-10);
@@ -942,7 +912,6 @@
           flex-direction: column;
           align-items: flex-start;
           gap: 12px;
-          position: relative;
           flex: 1;
           flex-grow: 1;
         }
@@ -952,10 +921,8 @@
           align-items: center;
           justify-content: space-between;
           padding: 8px 0px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
           background-color: var(--white);
           border-radius: 4px;
         }
@@ -964,8 +931,6 @@
           display: inline-flex;
           align-items: center;
           gap: 12px;
-          position: relative;
-          flex: 0 0 auto;
         }
 
         .container .frame-10 {
@@ -974,11 +939,9 @@
           width: 260px;
           align-items: flex-start;
           gap: 4px;
-          position: relative;
         }
 
         .container .text-wrapper-9 {
-          position: relative;
           align-self: stretch;
           margin-top: -1px;
           font-weight: 600;
@@ -993,7 +956,6 @@
           flex-direction: column;
           align-items: flex-start;
           padding: 0px 32px;
-          /* flex: 0 0 auto; */
         }
 
         .container .text-wrapper-10 {
@@ -1007,7 +969,6 @@
         }
 
         .container .co-eq {
-          position: relative;
           width: 130px;
           font-weight: 400;
           color: var(--primary-colorsgray-600);
@@ -1033,10 +994,8 @@
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
         }
 
         .container .data-two-columns {
@@ -1044,17 +1003,14 @@
           align-items: flex-start;
           gap: 16px;
           padding: 10px 0px 12px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
           border-bottom-width: 1px;
           border-bottom-style: solid;
           border-color: var(--primary-colorsgray-400);
         }
 
         .container .text-wrapper-12 {
-          position: relative;
           width: 110px;
           margin-top: -1px;
           font-weight: 400;
@@ -1062,6 +1018,7 @@
           font-size: 16px;
           letter-spacing: 0;
           line-height: 17.4px;
+          text-transform: capitalize;
         }
 
         .container .data-data {
@@ -1071,12 +1028,10 @@
           gap: 10px;
           align-self: stretch;
           flex-grow: 1;
-          position: relative;
           flex: 1;
         }
 
         .container .data {
-          position: relative;
           flex: 1;
           margin-top: -1px;
           font-weight: 500;
@@ -1092,7 +1047,6 @@
           font-size: 16px;
           letter-spacing: 0;
           line-height: 17.4px;
-          position: relative;
           flex: 1;
         }
 
@@ -1100,7 +1054,6 @@
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          position: relative;
           flex: 1;
           flex-grow: 1;
         }
@@ -1111,7 +1064,6 @@
           gap: 6px;
           align-self: stretch;
           display: flex;
-          position: relative;
           flex: 1;
           flex-grow: 1;
         }
@@ -1122,8 +1074,6 @@
           display: inline-flex;
           align-items: flex-start;
           padding: 0px 0px 3px;
-          position: relative;
-          flex: 0 0 auto;
           border-bottom-width: 2px;
           border-bottom-style: solid;
           border-color: var(--primary-colorsblue-400);
@@ -1133,10 +1083,8 @@
           display: flex;
           align-items: flex-start;
           gap: 4px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
         }
 
         .container .text-wrapper-13 {
@@ -1146,12 +1094,10 @@
           font-size: 14px;
           letter-spacing: 0;
           line-height: 15.3px;
-          position: relative;
           margin-top: -1px;
         }
 
         .container .text-wrapper-14 {
-          position: relative;
           width: 358px;
           margin-top: -1px;
           font-weight: 700;
@@ -1167,10 +1113,8 @@
           align-items: flex-start;
           gap: 12px;
           padding: 0px 32px 32px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
           background-color: var(--primary-colorsblue-10);
           border-radius: 4px;
           overflow: hidden;
@@ -1183,14 +1127,11 @@
           justify-content: center;
           gap: 12px;
           padding: 16px 0px 0px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
         }
 
         .container .environment {
-          position: relative;
           align-self: stretch;
           margin-top: -1px;
           font-weight: 400;
@@ -1202,7 +1143,6 @@
         }
 
         .container .text-wrapper-15 {
-          position: relative;
           align-self: stretch;
           font-weight: 400;
           color: var(--primary-colorsblue-700);
@@ -1225,7 +1165,6 @@
           min-width: 400px;
           align-items: flex-start;
           gap: 4px;
-          position: relative;
           flex: 1;
           flex-grow: 1;
         }
@@ -1235,13 +1174,11 @@
           justify-content: center;
           gap: 10px;
           display: flex;
-          position: relative;
           flex: 1;
           flex-grow: 1;
         }
 
         .container .text-wrapper-16 {
-          position: relative;
           align-self: stretch;
           font-weight: 400;
           color: var(--primary-colorsgray-700);
@@ -1255,7 +1192,6 @@
           flex-direction: column;
           min-width: 400px;
           align-items: flex-start;
-          position: relative;
           flex: 1;
           flex-grow: 1;
         }
@@ -1271,10 +1207,8 @@
           flex-direction: column;
           align-items: flex-start;
           gap: 12px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
         }
 
         .container .cards-traceability-2 {
@@ -1282,10 +1216,8 @@
           align-items: center;
           justify-content: space-between;
           padding: 8px 0px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
           border-radius: 4px;
         }
 
@@ -1293,12 +1225,9 @@
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          position: relative;
-          flex: 0 0 auto;
         }
 
         .container .company-name {
-          position: relative;
           align-self: stretch;
           margin-top: -1px;
           font-weight: 400;
@@ -1313,16 +1242,13 @@
           flex-direction: column;
           align-items: center;
           gap: 8px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
         }
 
         .container .rectangle-3 {
           align-self: stretch;
           width: 100%;
-          position: relative;
           height: 1px;
           background-color: var(--primary-colorsgray-400);
         }
@@ -1331,14 +1257,11 @@
           display: flex;
           align-items: flex-start;
           gap: 8px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
         }
 
         .container .div-6 {
-          position: relative;
           width: fit-content;
           margin-top: -1px;
           font-weight: 400;
@@ -1375,10 +1298,8 @@
           align-items: flex-start;
           gap: 12px;
           padding: 0px 200px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
         }
 
         .container .heading-wrapper {
@@ -1386,15 +1307,12 @@
           align-items: center;
           justify-content: center;
           gap: 10px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
         }
 
         .container .heading {
           flex: 1;
-          position: relative;
           margin-top: -1px;
           font-weight: 700;
           color: var(--primary-colorsgray-700);
@@ -1417,7 +1335,6 @@
           align-items: flex-start;
           justify-content: space-between;
           padding: 20px;
-          position: relative;
           flex: 1;
           flex-grow: 1;
           background-color: var(--white);
@@ -1431,11 +1348,9 @@
           width: 260px;
           align-items: flex-start;
           gap: 12px;
-          position: relative;
         }
 
         .container .percentage {
-          position: relative;
           width: 40px;
           margin-top: -1px;
           font-weight: 500;
@@ -1450,7 +1365,6 @@
           flex-direction: column;
           align-items: flex-start;
           gap: 6px;
-          position: relative;
           flex: 1;
           flex-grow: 1;
         }
@@ -1459,8 +1373,6 @@
           display: inline-flex;
           align-items: flex-start;
           gap: 6px;
-          position: relative;
-          flex: 0 0 auto;
         }
 
         .container .frame-26 {
@@ -1468,13 +1380,10 @@
           align-items: flex-start;
           gap: 4px;
           padding: 2px 4px;
-          position: relative;
-          flex: 0 0 auto;
           background-color: #d2e5f8;
         }
 
         .container .text-wrapper-19 {
-          position: relative;
           width: fit-content;
           margin-top: -1px;
           font-weight: 400;
@@ -1490,8 +1399,6 @@
           align-items: flex-start;
           gap: 4px;
           padding: 2px 4px;
-          position: relative;
-          flex: 0 0 auto;
           background-color: var(--primary-colorsblue-50);
         }
 
@@ -1500,8 +1407,6 @@
           flex-direction: column;
           align-items: flex-start;
           gap: 6px;
-          position: relative;
-          flex: 0 0 auto;
         }
 
         .container .frame-28 {
@@ -1509,10 +1414,8 @@
           flex-direction: column;
           align-items: center;
           gap: 12px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
         }
 
         .container .frame-29 {
@@ -1522,7 +1425,6 @@
         }
 
         .container .type-of-event {
-          position: relative;
           flex: 1;
           margin-top: -1px;
           font-weight: 400;
@@ -1533,7 +1435,6 @@
         }
 
         .container .text-wrapper-20 {
-          position: relative;
           align-self: stretch;
           font-weight: 400;
           color: var(--primary-colorsblue-700);
@@ -1549,15 +1450,12 @@
           justify-content: center;
           gap: 10px;
           padding: 24px 200px 76px;
-          position: relative;
           align-self: stretch;
           width: 100%;
-          flex: 0 0 auto;
           background-color: var(--primary-colorsblue-10);
         }
 
         .container .this-digital-product {
-          position: relative;
           flex: 1;
           margin-top: -1px;
           font-weight: 400;
@@ -1853,30 +1751,17 @@
         </div>
       </section>
 
-      <!-- FIXME: characteristics?????  -->
-      {{!-- <section class="production">
+      <section class="production">
         <div class="production-title">Production data</div>
         <div class="product-table table">
+          {{#each credentialSubject.characteristic}}
           <div class="table-item">
-            <span class="item-title">Battery status</span>
-            <p class="item-value">Recycled</p>
+            <span class="item-title">{{@key}}</span>
+            <p class="item-value">{{this}}</p>
           </div>
-          <div class="table-item">
-            <span class="item-title">Battery cell type</span>
-            <p class="item-value">Prismatic</p>
-          </div>
-          <div class="table-item">
-            <span class="item-title">Number of cells per battery</span>
-            <div class="item-value">
-              <p class="item-value">180</p>
-            </div>
-          </div>
-          <div class="table-item">
-            <span class="item-title">Total energy</span>
-            <p class="item-value">100kwh</p>
-          </div>
+          {{/each}}
         </div>
-      </section> --}}
+      </section>
 
       <section class="composition">
         <div>
@@ -2264,28 +2149,17 @@
           </div>
         </div>
 
-        <!-- FIXME: characteristics?????  -->
-        {{!-- <div class="frame-24">
+        <div class="frame-24">
           <div class="heading-wrapper"><div class="heading">Product data</div></div>
           <div class="div-5">
+            {{#each credentialSubject.characteristic}}
             <div class="data-two-columns">
-              <div class="text-wrapper-12">Battery status</div>
-              <div class="data-wrapper"><div class="data">Recycled</div></div>
+              <div class="text-wrapper-12">{{@key}}</div>
+              <div class="data-wrapper"><div class="data">{{this}}</div></div>
             </div>
-            <div class="data-two-columns">
-              <div class="text-wrapper-12">Battery cell type</div>
-              <div class="data-wrapper"><div class="data">Prismatic</div></div>
-            </div>
-            <div class="data-two-columns">
-              <p class="text-wrapper-12">Number of cells per battery</p>
-              <div class="data-wrapper"><div class="data">180</div></div>
-            </div>
-            <div class="data-two-columns">
-              <div class="text-wrapper-12">Total energy</div>
-              <div class="data-wrapper"><div class="data">100kwh</div></div>
-            </div>
+            {{/each}}
           </div>
-        </div> --}}
+        </div>
 
         <div class="div-2">
           <div class="typography-heading"><div class="text-wrapper-4">Composition</div></div>
@@ -2392,7 +2266,6 @@
         </div>
       </div>
       <!-- End desktop -->
-
 
     </div>
   </body>

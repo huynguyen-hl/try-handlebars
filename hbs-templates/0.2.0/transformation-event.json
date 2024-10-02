@@ -1,0 +1,51 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "eventID": "xsd:string",
+    "eventType": "xsd:string",
+    "eventTime": "xsd:string",
+    "actionCode": "xsd:string",
+    "dispositionCode": "xsd:string",
+    "businessStepCode": "xsd:string",
+    "readPointId": "xsd:string",
+    "locationId": "xsd:string",
+    "processType": "xsd:string",
+    "inputItemList": {
+      "@id": "xsd:string",
+      "@container": "@list",
+      "@context": {
+        "itemID": "xsd:string",
+        "name": "xsd:string",
+        "link": "xsd:string"
+      }
+    },
+    "outputItemList": {
+      "@id": "xsd:string",
+      "@container": "@list",
+      "@context": {
+        "itemID": "xsd:string",
+        "name": "xsd:string",
+        "link": "xsd:string"
+      }
+    },
+    "inputQuantityList": {
+      "@id": "xsd:string",
+      "@container": "@list",
+      "@context": {
+        "productClass": "xsd:string",
+        "quantity": "xsd:string",
+        "uom": "xsd:string"
+      }
+    },
+    "outputQuantityList": {
+      "@id": "xsd:string",
+      "@container": "@list",
+      "@context": {
+        "productClass": "xsd:string",
+        "quantity": "xsd:string",
+        "uom": "xsd:string"
+      }
+    }
+  }
+}
