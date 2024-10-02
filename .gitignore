@@ -143,4 +143,7 @@ dist
 
 .DS_Store
 
+html-templates
+reviewed-hbs-templates
+
 # End of https://www.toptal.com/developers/gitignore/api/node
