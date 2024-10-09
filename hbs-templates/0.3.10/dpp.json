@@ -127,9 +127,9 @@
           "schemeID": "https://www.unfc.org/resources/",
           "schemeName": "UN Framework Classification for Resources (UNFC)"
         },
-        "massFraction": 0.6,
-        "recycledAmount": 0.2,
-        "hazardous": false,
+        "massFraction": 20,
+        "recycledAmount": 20,
+        "hazardous": true,
         "materialSafetyInformation": {
           "type": ["Link"],
           "linkURL": "https://example.com/safety-info/lithium-spodumene.pdf",
@@ -149,8 +149,8 @@
           "schemeID": "https://www.unfc.org/resources/",
           "schemeName": "UN Framework Classification for Resources (UNFC)"
         },
-        "massFraction": 0.6,
-        "recycledAmount": 0.2,
+        "massFraction": 30,
+        "recycledAmount": 20,
         "hazardous": false
       }
     ],
@@ -184,7 +184,7 @@
           {
             "type": ["Criterion"],
             "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf#BatteryAssembly",
-            "name": "Battery Assembly Guidelines",
+            "name": "emissions intensity",
             "thresholdValues": [
               {
                 "type": ["Metric"],
@@ -201,7 +201,7 @@
           {
             "type": ["Criterion"],
             "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf#BatteryAssembly",
-            "name": "Battery Assembly Guidelines",
+            "name": "emissions intensity",
             "thresholdValues": [
               {
                 "type": ["Metric"],
@@ -265,17 +265,17 @@
         "linkName": "Repair Information",
         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/repair"
       },
-      "recyclableContent": 0.8,
-      "recycledContent": 0.4,
-      "utilityFactor": 1.5,
-      "materialCircularityIndicator": 0.75
+      "recyclableContent": 67,
+      "recycledContent": 86,
+      "utilityFactor": 1.2,
+      "materialCircularityIndicator": 0.67
     },
     "emissionsScorecard": {
       "type": ["EmissionsPerformance"],
       "carbonFootprint": 1.8,
       "declaredUnit": "KGM",
       "operationalScope": "CradleToGate",
-      "primarySourcedRatio": 0.3,
+      "primarySourcedRatio": 75,
       "reportingStandard": {
         "type": ["Standard"],
         "id": "https://www.ghgprotocol.org/standards/product-standard",
