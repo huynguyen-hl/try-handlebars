@@ -1,0 +1,21 @@
+{
+	"did": "did:web:huynguyen-hl.github.io/try-handlebars",
+	"controllerKeyId": "b57700aab0e355761caa3160a73d6dba0ffdf14111105e3d0b5ff04783b5fe3e",
+	"provider": "did:web",
+	"services": [],
+	"keys": [
+		{
+			"kid": "b57700aab0e355761caa3160a73d6dba0ffdf14111105e3d0b5ff04783b5fe3e",
+			"type": "Ed25519",
+			"kms": "local",
+			"publicKeyHex": "b57700aab0e355761caa3160a73d6dba0ffdf14111105e3d0b5ff04783b5fe3e",
+			"meta": {
+				"algorithms": [
+					"EdDSA",
+					"Ed25519"
+				]
+			}
+		}
+	],
+	"alias": "huynguyen-hl.github.io/try-handlebars"
+}
