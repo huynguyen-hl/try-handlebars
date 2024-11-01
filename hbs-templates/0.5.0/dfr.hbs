@@ -26,6 +26,10 @@
       --primary-colorsblue-600: rgba(0, 110, 181, 1);
       --primary-colorsgray-400: rgba(212, 214, 216, 1);
       --primary-colorsgray-300: rgba(237, 239, 240, 1);
+      --accent-colorslight-green: rgba(184, 236, 182, 1);
+      --text-color-green: rgba(8, 50, 0, 1);
+      --accent-colorslight-red: rgba(255, 188, 183, 1);
+      --text-color-red: rgba(50, 0, 0, 1);
     }
 
     /* Globals CSS */
@@ -142,46 +146,8 @@
       border-bottom: none;
     }
 
-    .facility-record .table {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .facility-record .table-item {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      column-gap: 16px;
-      align-items: center;
-      padding: 10px 0px 12px 0px;
-
-      border-bottom: 1px solid #d4d6d8;
-    }
-
     .facility-record .table-line {
       border-bottom: 1px solid #d4d6d8;
-    }
-
-    .facility-record .item-title {
-      display: flex;
-
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 17.44px;
-      color: #55606E;
-      text-transform: capitalize;
-    }
-
-    .facility-record .item-value {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 17.44px;
-      color: #232E3D;
     }
 
     .facility-record .item-value a {
@@ -320,7 +286,7 @@
       line-height: 19.2px;
     }
 
-    .facility-record .text-wrapper-2 {
+    .facility-record .text-wrapper-3 {
       color: #55606e;
     }
 
@@ -358,10 +324,10 @@
 
     .facility-record .heading {
       flex: 1;
-      font-weight: 700;
       color: var(--primary-colorsgray-700);
-      font-size: 40px;
-      line-height: 43.6px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 17.44px;
     }
 
     .facility-record .heading-2 {
@@ -406,76 +372,6 @@
       line-height: 17.4px;
       align-self: stretch;
       font-weight: 400;
-    }
-
-    .facility-record .declaration-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .facility-record .declaration-body {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-
-      border-radius: 4px;
-      padding: 16px;
-      background-color: #F7FAFD;
-    }
-
-    .facility-record .conformity {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .facility-record .conformity-topic {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 19.25px;
-      text-transform: uppercase;
-      color: #55606E;
-    }
-
-    .facility-record .conformity-evidence-name {
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 21.24px;
-      color: #1F5A95;
-    }
-
-    .facility-record .declared-values,
-    .facility-record .assessment-criteria {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .facility-record .declared-title,
-    .facility-record .assessment-criteria-title {
-      color: #232E3D;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 17.44px;
-    }
-
-    .facility-record .assessment-criteria-item {
-      padding-left: 15px;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 17.44px;
-    }
-
-    .facility-record .assessment-criteria-item span {
-      font-weight: 700;
-    }
-
-    .facility-record .assessment-criteria-item a {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 15.26px;
-      color: #232E3D;
     }
 
     .facility-record .issuing-details {
@@ -542,14 +438,14 @@
       font-weight: 400;
       color: var(--primary-colorsgray-300);
       font-size: 16px;
-      line-height: 17.4px;
+      line-height: 22px;
     }
 
     .facility-record .label-2 {
       font-weight: 400;
       color: var(--primary-colorsgray-600);
       font-size: 16px;
-      line-height: 17.4px;
+      line-height: 22px;
     }
 
     .facility-record .data-data-link {
@@ -564,11 +460,13 @@
 
     .facility-record .div-wrapper {
       gap: 10px;
-      border-color: var(--primary-colorsblue-400);
       display: inline-flex;
       align-items: flex-start;
-      border-bottom-width: 2px;
-      border-bottom-style: solid;
+
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--primary-colorsblue-400);
+      text-underline-offset: 3px;
     }
 
     .facility-record .line {
@@ -577,7 +475,7 @@
       gap: 10px;
       border-bottom-width: 2px;
       border-bottom-style: solid;
-      border-color: var(--primary-colorsblue-100-full);
+      border-color: var(--primary-colorsblue-200);
     }
 
     .facility-record .line-2 {
@@ -593,7 +491,16 @@
       font-weight: 500;
       color: var(--primary-colorsgray-700);
       font-size: 16px;
-      line-height: 17.4px;
+      line-height: 22px;
+    }
+
+    .facility-record .line-4 {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 10px;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      border-color: var(--primary-colorsblue-400);
     }
 
     .facility-record .data-data {
@@ -603,6 +510,10 @@
       align-self: stretch;
       flex-grow: 1;
       flex: 1;
+    }
+
+    .facility-record .data-data a {
+      line-height: 22px;
     }
 
     .facility-record .data-data-2 a {
@@ -625,66 +536,6 @@
       flex: 1;
     }
 
-    .facility-record .traceability-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .facility-record .traceability-card {
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      justify-content: space-between;
-      align-items: center;
-
-      min-height: 40px;
-      text-decoration: none;
-    }
-
-    .facility-record .traceability-card-text {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 17.44px;
-      color: #000000;
-    }
-
-    .facility-record .traceability-card-view-details,
-    .facility-record .traceability-card-view-details:link {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .facility-record .table-line {
-      border-bottom: 1px solid #d4d6d8;
-    }
-
-    .facility-record .annotation {
-      display: flex;
-      gap: 4px;
-
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 15.26px;
-      color: #55606E;
-    }
-
-    .facility-record .gray-bottom-line {
-      border-bottom: 1px #232E3D solid;
-      width: fit-content;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 10px;
-      display: inline-flex;
-      text-decoration: none;
-      color: #232E3D;
-    }
-
     .blue-bottom-line,
     .blue-bottom-line:link {
       border-bottom: 2px hsl(210, 68%, 59%) solid;
@@ -700,9 +551,20 @@
 
     .blue-bottom-line-2,
     .blue-bottom-line-2:link {
-      border-bottom: 2px var(--primary-colorsblue-200) solid;
       width: fit-content;
       color: var(--white);
+
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--primary-colorsblue-200);
+      text-underline-offset: 3px;
+    }
+
+    /* Media Queries for Mobiles */
+    @media (min-width: 50px) {
+      .facility-record {
+        min-width: 375px;
+      }
     }
   </style>
 </head>
@@ -723,8 +585,7 @@
             <div class="data-two-columns border-bottom-gray-500">
               <div class="label">Operator</div>
               <div class="data-data">
-                <a href="{{credentialSubject.operatedByParty.id}}"
-                  class="blue-bottom-line-2">{{credentialSubject.operatedByParty.name}}</a>
+                <a target="_blank" href="{{credentialSubject.operatedByParty.id}}" class="blue-bottom-line-2">{{credentialSubject.operatedByParty.name}}</a>
               </div>
             </div>
             <div class="data-two-columns border-bottom-gray-500">
@@ -736,23 +597,27 @@
             <div class="data-two-columns border-bottom-gray-500">
               <div class="label">Address</div>
               <div class="data-data">
-                <a href="https://www.google.com/maps/?q={{#each credentialSubject.locationInformation.geoLocation.coordinates.data}}{{this}},{{/each}}&ll={{#each credentialSubject.locationInformation.geoLocation.coordinates.data}}{{this}},{{/each}}&z=13"
-                  class="blue-bottom-line-2" target="_blank">{{credentialSubject.address.streetAddress}}</a>
+                {{!-- TODO 1: plain text --}}
+                <div class="data">{{credentialSubject.address.streetAddress}} {{credentialSubject.address.addressLocality}}, {{credentialSubject.address.postalCode}}</div>
+                {{!-- TODO 2: confirm --}}
+                {{!-- <a target="_blank" href="https://www.google.com/maps/?q={{credentialSubject.address.streetAddress}} {{credentialSubject.address.addressRegion}} {{credentialSubject.address.postalCode}} {{credentialSubject.address.addressCountry}}" class="blue-bottom-line-2">{{credentialSubject.address.streetAddress}}</a> --}}
+                {{!-- TODO 3: confirm --}}
+                {{!-- <a target="_blank" href="{{credentialSubject.locationInformation.plusCode}}" class="blue-bottom-line-2">{{credentialSubject.address.streetAddress}} {{credentialSubject.address.addressLocality}}, {{credentialSubject.address.postalCode}}</a> --}}
               </div>
             </div>
             <div class="data-two-columns border-bottom-gray-500">
               <div class="label">Processes</div>
               <div class="data-data-2">
-                {{#each credentialSubject.processCategories}}
-                <a href="{{id}}" class="blue-bottom-line-2">{{name}}</a>
+                {{#each credentialSubject.processCategory}}
+                <a target="_blank" href="{{id}}" class="blue-bottom-line-2">{{name}}</a>
                 {{/each}}
               </div>
             </div>
             <div class="data-two-columns border-bottom-gray-500">
               <div class="label">Geolocation</div>
-              <a href="https://www.google.com/maps/?q={{#each credentialSubject.locationInformation.geoLocation.coordinates.data}}{{this}},{{/each}}&ll={{#each credentialSubject.locationInformation.geoLocation.coordinates.data}}{{this}},{{/each}}&z=13"
-                class="data-data-link" target="_blank">
-                <div class="line">
+              {{!-- TODO: confirm --}}
+              <a target="_blank" href="https://www.google.com/maps/?q={{#each credentialSubject.locationInformation.geoLocation.coordinates}}{{this}},{{/each}}&ll={{#each credentialSubject.locationInformation.geoLocation.coordinates}}{{this}},{{/each}}&z=13" class="data-data-link" target="_blank">
+                <div class="line-4">
                   <div class="line-2">Show on map</div>
                 </div>
               </a>
@@ -760,91 +625,67 @@
           </div>
         </div>
       </div>
+
       <section class="declarations">
         <div class="declaration-title">Declarations</div>
-        <!-- FIXME -->
-        <div class="declaration-list">
-          {{#each credentialSubject.conformityDeclarations}}
-          <div class="declaration-body">
-            <div class="conformity">
-              <!-- FIXME -->
-              <p class="conformity-topic">{{conformityTopic}}</p>
-              <!-- FIXME -->
-              <p class="conformity-evidence-name">{{conformityEvidence.linkName}}</p>
+        
+        <div class="cards-conformities">
+          {{#each credentialSubject.conformityClaim}}
+          <div class="cards-conformity">
+            <div class="frame">
+              <div class="div-2">
+                <div class="company-name">Conformance:</div>
+                <div class="{{#if conformance}}tags-VC-badge-green{{else}}tags-VC-badge-red{{/if}}">
+                  <div class="verifiable">{{#if conformance}}Yes{{else}}No{{/if}}</div>
+                </div>
+              </div>
+              <div class="company-name">Assessed: {{assessmentDate}}</div>
             </div>
-            <!-- FIXME -->
-            <div class="declared-values">
-              <p class="declared-title">Declared values</p>
-              {{#each declaredValues}}
-              <div class="table">
-                <div class="table-item">
-                  <span class="item-title">Name</span>
-                  <!-- FIXME -->
-                  <p class="item-value">{{metricName}}</p>
+            <div class="frame-2">
+              <div class="text-wrapper">{{conformityEvidence.linkName}}</div>
+              <p class="p">
+                <span class="span">{{referenceRegulation.name}} administered in {{referenceRegulation.jurisdictionCountry}} by </span>
+                <a target="_blank" href="{{referenceRegulation.administeredBy.id}}" class="text-wrapper-3 gray-bottom-line">{{referenceRegulation.administeredBy.name}}</a>
+              </p>
+              <p class="p">
+                <span class="span">{{referenceStandard.name}} issued by </span>
+                <a target="_blank" href="{{referenceStandard.issuingParty.id}}" class="text-wrapper-3 gray-bottom-line">{{referenceStandard.issuingParty.name}}</a>
+              </p>
+            </div>
+            <div class="frame-3">
+              {{#each declaredValue}}
+              <div class="frame-4">
+                <div class="typography-heading">
+                  <p class="heading">{{metricName}} is {{metricValue.value}}{{metricValue.unit}}</p>
                 </div>
-                <div class="table-item">
-                  <span class="item-title">Value</span>
-                  <!-- FIXME -->
-                  <p class="item-value">{{metricValue.value}}{{metricValue.unit}}</p>
-                </div>
-                <div class="table-item">
-                  <span class="item-title">Accuracy</span>
-                  <!-- FIXME -->
-                  <div class="item-value">{{accuracy}}</div>
+                <div class="typography-heading">
+                  <p class="heading-2">Score: {{score}} | Accuracy {{accuracy}}</p>
                 </div>
               </div>
               {{/each}}
             </div>
-
-            <div class="assessment-criteria">
-              <p class="assessment-criteria-title">Assessment Criteria</p>
-              <!-- FIXME -->
-              {{#each assessmentCriteria}}
-              <div class="assessment-criteria-list">
-                <ul class="assessment-criteria-item">
-                  <li>
-                    Industry average {{name}} is
-                    <span>{{thresholdValues.0.metricValue.value}}{{thresholdValues.0.metricValue.unit}}</span>.
-                    <div><a href="{{id}}" class="blue-bottom-line">Assessment criteria</a></div>
-                  </li>
-                </ul>
+            <a target="_blank" href="{{conformityEvidence.linkURL}}" class="cards-traceability">
+              <div class="frame-5">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM5 5V19H19V5H17V12L14.5 10.5L12 12V5H5Z"
+                    fill="#1F5A95"></path>
+                </svg>
+                <div class="company-name-wrapper">
+                  <div class="company-name-2">Evidence</div>
+                </div>
               </div>
-              {{/each}}
-            </div>
-
-            <div class="traceability-cards">
-              <!-- FIXME -->
-              <a href="{{conformityEvidence.linkURL}}" class="traceability-card">
-                <div class="traceability-card-text">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM5 5V19H19V5H17V12L14.5 10.5L12 12V5H5Z"
-                      fill="#1F5A95" />
-                  </svg>
-                  <p>Conformity evidence</p>
-                </div>
-                <div class="traceability-card-view-details">
-                  <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L8 8L1 15" stroke="#1F5A95" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </div>
-              </a>
-            </div>
-            <div class="table-line"></div>
-            <div class="annotation">
-              <!-- FIXME -->
-              <p>Administered in {{referenceRegulation.jurisdictionCountry}} by <a
-                  href="{{referenceRegulation.administeredBy.id}}"
-                  class="gray-bottom-line">{{referenceRegulation.administeredBy.name}}</a> Issued by <a
-                  href="{{referenceStandard.issuingParty.id}}"
-                  class="gray-bottom-line">{{referenceStandard.issuingParty.name}}</a>, 2024 </p>
-            </div>
+              <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L8 8L1 15" stroke="#1F5A95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+              </svg>
+            </a>
           </div>
           {{/each}}
         </div>
       </section>
     </div>
+
     <div class="issuing-details">
       <div class="typography-heading">
         <div class="text-wrapper-2">Issuing details</div>
@@ -854,7 +695,7 @@
           <div class="label-2">Issued by</div>
           <div class="data-data-link">
             <div class="div-wrapper">
-              <a href="{{issuer.id}}" class="line-3">{{issuer.name}}</a>
+              <a target="_blank" href="{{issuer.id}}" class="line-3">{{issuer.name}}</a>
             </div>
           </div>
         </div>

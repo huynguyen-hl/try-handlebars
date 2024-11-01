@@ -1,0 +1,289 @@
+{
+  "type": ["DigitalFacilityRecord", "VerifiableCredential"],
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://vocabulary.uncefact.org/untp/dfr/0.5.0/"
+  ],
+  "id": "https://example-company.com/credentials/2a423366-a0d6-4855-ba65-2e0c926d09b0",
+  "issuer": {
+    "type": ["CredentialIssuer"],
+    "id": "did:web:identifiers.example-company.com:12345",
+    "name": "Example Company Pty Ltd",
+    "otherIdentifier": [
+      {
+        "type": ["Identifier"],
+        "id": "https://id.gs1.org/01/09520123456788/21/12345",
+        "name": "EV battery 300Ah.",
+        "registeredId": "90664869327",
+        "idScheme": {
+          "type": ["IdentifierScheme"],
+          "id": "https://id.gs1.org/01/",
+          "name": "Global Trade Identification Number (GTIN)"
+        }
+      }
+    ]
+  },
+  "validFrom": "12:32pm 28/03/2023",
+  "validUntil": "12:32pm 28/03/2028",
+  "credentialSubject": {
+    "type": ["Facility"],
+    "id": "https://id.gs1.org/gln/0614141123452",
+    "registeredId": "0614141123452",
+    "description": "Warehouse located on the south side of the larger location Warrenherd facility with primarily  battery focus through 2028.",
+    "name": "Greenacres battery factory",
+    "idScheme": {
+      "type": ["IdentifierScheme"],
+      "id": "https://id.gs1.org/01/",
+      "name": "Global Trade Identification Number (GTIN)"
+    },
+    "countryOfOperation": "Australia",
+    "processCategory": [
+      {
+        "type": ["Classification"],
+        "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
+        "code": "46410",
+        "name": "CAM",
+        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+        "schemeName": "UN Central Product Classification (CPC)"
+      },
+      {
+        "type": ["Classification"],
+        "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
+        "code": "46410",
+        "name": "Cathode",
+        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+        "schemeName": "UN Central Product Classification (CPC)"
+      },
+      {
+        "type": ["Classification"],
+        "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
+        "code": "46410",
+        "name": "Anode",
+        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+        "schemeName": "UN Central Product Classification (CPC)"
+      },
+      {
+        "type": ["Classification"],
+        "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
+        "code": "46410",
+        "name": "Cell",
+        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+        "schemeName": "UN Central Product Classification (CPC)"
+      },
+      {
+        "type": ["Classification"],
+        "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
+        "code": "46410",
+        "name": "Module",
+        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+        "schemeName": "UN Central Product Classification (CPC)"
+      }
+    ],
+    "operatedByParty": {
+      "type": ["Identifier"],
+      "id": "https://id.gs1.org/01/09520123456788/21/12345",
+      "name": "Sample Company Pty Ltd",
+      "registeredId": "90664869327",
+      "idScheme": {
+        "type": ["IdentifierScheme"],
+        "id": "https://id.gs1.org/01/",
+        "name": "Global Trade Identification Number (GTIN)"
+      }
+    },
+    "otherIdentifier": [
+      {
+        "type": ["Identifier"],
+        "id": "https://id.gs1.org/01/09520123456788/21/12345",
+        "name": "EV battery 300Ah.",
+        "registeredId": "90664869327",
+        "idScheme": {
+          "type": ["IdentifierScheme"],
+          "id": "https://id.gs1.org/01/",
+          "name": "Global Trade Identification Number (GTIN)"
+        }
+      }
+    ],
+    "address": {
+      "type": ["Address"],
+      "streetAddress": "1200 Pennsylvania Ave. SE",
+      "postalCode": "20003",
+      "addressLocality": "Acton",
+      "addressRegion": "Washington",
+      "addressCountry": "USA"
+    },
+    "locationInformation": {
+      "type": ["Location"],
+      "plusCode": "https://plus.codes/8CGRC78W+MM",
+      "geoLocation": {
+        "type": "Point",
+        "coordinates": [-33.857284, 151.215142]
+      },
+      "geoBoundary": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [149.123, -35.307],
+            [149.124, -35.308],
+            [149.125, -35.309],
+            [149.123, -35.307]
+          ]
+        ]
+      }
+    },
+    "conformityClaim": [
+      {
+        "type": ["Claim", "Declaration"],
+        "assessmentDate": "08/10/2025",
+        "id": "https://products.example-company.com/09520123456788/declarations/12345",
+        "referenceStandard": {
+          "type": ["Standard"],
+          "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf",
+          "name": "GBA Battery Passport",
+          "issuingParty": {
+            "type": ["Identifier"],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "Global Battery Alliance",
+            "registeredId": "12345",
+            "idScheme": {
+              "type": ["IdentifierScheme"],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            }
+          },
+          "issueDate": "2023-12-05"
+        },
+        "referenceRegulation": {
+          "type": ["Regulation"],
+          "id": "https://www.legislation.gov.au/F2008L02309/latest/versions",
+          "name": "National Greenhouse",
+          "jurisdictionCountry": "AU",
+          "administeredBy": {
+            "type": ["Identifier"],
+            "id": "https://id.gs1.org/01/09520123456788/21/12345",
+            "name": "Australian Government",
+            "registeredId": "12345",
+            "idScheme": {
+              "type": ["IdentifierScheme"],
+              "id": "https://id.gs1.org/01/",
+              "name": "Global Trade Identification Number (GTIN)"
+            }
+          },
+          "effectiveDate": "2024-03-20"
+        },
+        "assessmentCriteria": [
+          {
+            "type": ["Criterion"],
+            "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf#BatteryAssembly",
+            "name": "GBA Battery rule book v2.0 battery assembly guidelines.",
+            "thresholdValues": [
+              {
+                "type": ["Metric"],
+                "metricName": "GHG emissions intensity",
+                "metricValue": {
+                  "type": ["Measure"],
+                  "value": 10,
+                  "unit": "KG"
+                },
+                "score": "BB",
+                "accuracy": 0.05
+              }
+            ]
+          }
+        ],
+        "declaredValue": [
+          {
+            "type": ["Metric"],
+            "metricName": "GHG emissions intensity",
+            "metricValue": {
+              "type": ["Measure"],
+              "value": 10,
+              "unit": "KG"
+            },
+            "score": "BB",
+            "accuracy": 0.05
+          }
+        ],
+        "conformance": true,
+        "conformityTopic": "environment.energy",
+        "conformityEvidence": {
+          "type": ["SecureLink", "Link"],
+          "linkURL": "https://files.example-certifier.com/1234567.json",
+          "linkName": "GBA rule book conformity certificate",
+          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+          "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+          "hashMethod": "SHA-256",
+          "encryptionMethod": "AES"
+        }
+      },
+      {
+        "type": ["Claim", "Declaration"],
+        "assessmentDate": "08/10/2025",
+        "declaredValue": [
+          {
+            "type": ["Metric"],
+            "metricName": "GHG emissions intensity",
+            "metricValue": { "value": 1.5, "unit": "kg" },
+            "score": "1.2",
+            "accuracy": 0.8
+          },
+          {
+            "type": ["Metric"],
+            "metricName": "GHG emissions intensity",
+            "metricValue": { "value": 1.5, "unit": "kg" },
+            "score": "1.2",
+            "accuracy": 0.8
+          }
+        ],
+        "id": "https://products.example-company.com/09520123456788/declarations/12345",
+        "referenceStandard": {
+          "type": ["Standard"],
+          "id": "https://www.iso.org/standard/60857.html",
+          "name": "Standard",
+          "issuingParty": {
+            "type": ["Identifier"],
+            "id": "https://iso.org/issuing-party/123",
+            "name": "International Organization"
+          },
+          "issueDate": "2023-12-05"
+        },
+        "referenceRegulation": {
+          "type": ["Regulation"],
+          "id": "https://www.legislation.gov.au/F2008L02309/latest/versions",
+          "name": "National Greenhouse",
+          "jurisdictionCountry": "Australia",
+          "administeredBy": {
+            "type": ["Identifier"],
+            "id": "https://gov.au/admin-body/12345",
+            "name": "Australian Government"
+          },
+          "effectiveDate": "2024-03-20"
+        },
+        "assessmentCriteria": [
+          {
+            "type": ["Criterion"],
+            "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf#BatteryAssembly",
+            "name": "Battery Assembly Guidelines",
+            "thresholdValues": [
+              {
+                "type": ["Metric"],
+                "metricName": "Minimum compressive strength",
+                "metricValue": { "value": 500, "unit": "MPA" }
+              }
+            ]
+          }
+        ],
+        "conformance": false,
+        "conformityTopic": "environment.energy",
+        "conformityEvidence": {
+          "type": ["SecureLink", "Link"],
+          "linkURL": "https://example-certifier.com/evidence/1234567.json",
+          "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+          "hashMethod": "SHA-256",
+          "linkName": "Declaration link name",
+          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+          "encryptionMethod": "AES"
+        }
+      }
+    ]
+  }
+}

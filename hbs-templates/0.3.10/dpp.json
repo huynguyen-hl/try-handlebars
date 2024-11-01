@@ -52,6 +52,14 @@
         "name": "Primary cells and primary batteries",
         "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
         "schemeName": "UN Central Product Classification (CPC)"
+      },
+      {
+        "type": ["Classification"],
+        "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
+        "code": "46410",
+        "name": "Primary cells and primary batteries",
+        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+        "schemeName": "UN Central Product Classification (CPC)"
       }
     ],
     "furtherInformation": [

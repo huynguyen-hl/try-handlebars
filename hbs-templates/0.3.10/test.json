@@ -1,0 +1,8 @@
+{
+  "credentialSubject": [{
+    "type": ["TransformationEvent", "Event"]
+  },
+  {
+    "type": ["AssociationEvent", "Event"]
+  }]
+}

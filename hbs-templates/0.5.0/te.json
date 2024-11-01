@@ -1,0 +1,335 @@
+{
+  "type": ["DigitalTraceabilityEvent", "VerifiableCredential"],
+  "id": "https://example-company.com/credentials/2a423366-a0d6-4855-ba65-2e0c926d09b0",
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://vocabulary.uncefact.org/untp/dte/0.5.0/"
+  ],
+  "issuer": {
+    "type": ["CredentialIssuer"],
+    "id": "did:web:identifiers.example-company.com:12345",
+    "name": "Example Company Pty Ltd",
+    "otherIdentifier": [
+      {
+        "type": ["Identifier"],
+        "id": "https://id.gs1.org/01/09520123456788/21/12345",
+        "name": "EV battery 300Ah",
+        "registeredId": "90664869327",
+        "idScheme": {
+          "type": ["IdentifierScheme"],
+          "id": "https://id.gs1.org/01/",
+          "name": "Global Trade Identification Number (GTIN)"
+        }
+      }
+    ]
+  },
+  "validFrom": "12:32pm 28/03/2023",
+  "credentialSubject": [
+    {
+      "type": ["TransformationEvent", "Event"],
+      "id": "https://events.sample.com/b681df10-c682-454a-b11b-d0b9374c01bd",
+      "eventTime": "12:28 on 13/03/2024",
+      "action": "add",
+      "disposition": "https://ref.gs1.org/cbv/Disp-active",
+      "bizStep": "Commissioning",
+      "bizLocation": "https://id.gs1.org/414/9520123456788",
+      "sensorElementList": [
+        {
+          "type": ["SensorElement"],
+          "sensorMetadata": {
+            "type": ["Sensor"],
+            "device": {
+              "type": ["Item"],
+              "id": "https://id.gs1.org/01/09520123456788/21/12345",
+              "name": "Sensor device name"
+            },
+            "dataProcessingMethod": "https://standards.org/sensorMethod#1234"
+          },
+          "sensorReport": [
+            {
+              "type": ["SensorData"],
+              "time": "12:28 on 13/03/2024",
+              "sensorType": "https://samplesensors.com/model1234",
+              "value": 25,
+              "uom": "kg"
+            },
+            {
+              "type": ["SensorData"],
+              "time": "12:28 on 13/03/2024",
+              "sensorType": "https://samplesensors.com/model1234",
+              "value": 25,
+              "uom": "kg"
+            }
+          ],
+          "sensorIntegrityProof": "https://jargon.sh"
+        }
+      ],
+      "outputEPCList": [
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        },
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        },
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        }
+      ],
+      "inputEPCList": [
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        },
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        }
+      ],
+      "inputQuantityList": [
+        {
+          "type": ["QuantityElement"],
+          "productId": "https://id.gs1.org/01/09520123456788/21/12345",
+          "productName": "EV battery 300Ah",
+          "quantity": 20,
+          "uom": "kg"
+        },
+        {
+          "type": ["QuantityElement"],
+          "productId": "https://id.gs1.org/01/09520123456788/21/12345",
+          "productName": "EV battery 300Ah",
+          "quantity": 20,
+          "uom": "kg"
+        }
+      ],
+      "outputQuantityList": [
+        {
+          "type": ["QuantityElement"],
+          "productId": "https://id.gs1.org/01/09520123456788/21/12345",
+          "productName": "EV battery 300Ah",
+          "quantity": 20,
+          "uom": "kg"
+        },
+        {
+          "type": ["QuantityElement"],
+          "productId": "https://id.gs1.org/01/09520123456788/21/12345",
+          "productName": "EV battery 300Ah",
+          "quantity": 20,
+          "uom": "kg"
+        }
+      ],
+      "processType": "Anode manufacture"
+    },
+    {
+      "type": ["TransformationEvent", "Event"],
+      "id": "https://events.sample.com/b681df10-c682-454a-b11b-d0b9374c01bd",
+      "eventTime": "12:28 on 13/03/2024",
+      "action": "add",
+      "disposition": "https://ref.gs1.org/cbv/Disp-active",
+      "bizStep": "Commissioning",
+      "bizLocation": "https://id.gs1.org/414/9520123456788",
+      "sensorElementList": [
+        {
+          "type": ["SensorElement"],
+          "sensorMetadata": {
+            "type": ["Sensor"],
+            "device": {
+              "type": ["Item"],
+              "id": "https://id.gs1.org/01/09520123456788/21/12345",
+              "name": "Sensor device name"
+            },
+            "dataProcessingMethod": "https://standards.org/sensorMethod#1234"
+          },
+          "sensorReport": [
+            {
+              "type": ["SensorData"],
+              "time": "12:28 on 13/03/2024",
+              "sensorType": "https://samplesensors.com/model1234",
+              "value": 25,
+              "uom": "kg"
+            },
+            {
+              "type": ["SensorData"],
+              "time": "12:28 on 13/03/2024",
+              "sensorType": "https://samplesensors.com/model1234",
+              "value": 25,
+              "uom": "kg"
+            }
+          ],
+          "sensorIntegrityProof": "https://jargon.sh"
+        }
+      ],
+      "outputEPCList": [
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        },
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        },
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        }
+      ],
+      "inputEPCList": [
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        },
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        }
+      ],
+      "inputQuantityList": [
+        {
+          "type": ["QuantityElement"],
+          "productId": "https://id.gs1.org/01/09520123456788/21/12345",
+          "productName": "EV battery 300Ah",
+          "quantity": 20,
+          "uom": "kg"
+        },
+        {
+          "type": ["QuantityElement"],
+          "productId": "https://id.gs1.org/01/09520123456788/21/12345",
+          "productName": "EV battery 300Ah",
+          "quantity": 20,
+          "uom": "kg"
+        }
+      ],
+      "outputQuantityList": [
+        {
+          "type": ["QuantityElement"],
+          "productId": "https://id.gs1.org/01/09520123456788/21/12345",
+          "productName": "EV battery 300Ah",
+          "quantity": 20,
+          "uom": "kg"
+        },
+        {
+          "type": ["QuantityElement"],
+          "productId": "https://id.gs1.org/01/09520123456788/21/12345",
+          "productName": "EV battery 300Ah",
+          "quantity": 20,
+          "uom": "kg"
+        }
+      ],
+      "processType": "Anode manufacture"
+    },
+    {
+      "type": ["TransformationEvent", "Event"],
+      "id": "https://events.sample.com/b681df10-c682-454a-b11b-d0b9374c01bd",
+      "eventTime": "12:28 on 13/03/2024",
+      "action": "add",
+      "disposition": "https://ref.gs1.org/cbv/Disp-active",
+      "bizStep": "Commissioning",
+      "bizLocation": "https://id.gs1.org/414/9520123456788",
+      "sensorElementList": [
+        {
+          "type": ["SensorElement"],
+          "sensorMetadata": {
+            "type": ["Sensor"],
+            "device": {
+              "type": ["Item"],
+              "id": "https://id.gs1.org/01/09520123456788/21/12345",
+              "name": "Sensor device name"
+            },
+            "dataProcessingMethod": "https://standards.org/sensorMethod#1234"
+          },
+          "sensorReport": [
+            {
+              "type": ["SensorData"],
+              "time": "12:28 on 13/03/2024",
+              "sensorType": "https://samplesensors.com/model1234",
+              "value": 25,
+              "uom": "kg"
+            },
+            {
+              "type": ["SensorData"],
+              "time": "12:28 on 13/03/2024",
+              "sensorType": "https://samplesensors.com/model1234",
+              "value": 25,
+              "uom": "kg"
+            }
+          ],
+          "sensorIntegrityProof": "https://jargon.sh"
+        }
+      ],
+      "outputEPCList": [
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        },
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        },
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        }
+      ],
+      "inputEPCList": [
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        },
+        {
+          "type": ["Item"],
+          "id": "https://id.gs1.org/01/09520123456788/21/12345",
+          "name": "Name of item"
+        }
+      ],
+      "inputQuantityList": [
+        {
+          "type": ["QuantityElement"],
+          "productId": "https://id.gs1.org/01/09520123456788/21/12345",
+          "productName": "EV battery 300Ah",
+          "quantity": 20,
+          "uom": "kg"
+        },
+        {
+          "type": ["QuantityElement"],
+          "productId": "https://id.gs1.org/01/09520123456788/21/12345",
+          "productName": "EV battery 300Ah",
+          "quantity": 20,
+          "uom": "kg"
+        }
+      ],
+      "outputQuantityList": [
+        {
+          "type": ["QuantityElement"],
+          "productId": "https://id.gs1.org/01/09520123456788/21/12345",
+          "productName": "EV battery 300Ah",
+          "quantity": 20,
+          "uom": "kg"
+        },
+        {
+          "type": ["QuantityElement"],
+          "productId": "https://id.gs1.org/01/09520123456788/21/12345",
+          "productName": "EV battery 300Ah",
+          "quantity": 20,
+          "uom": "kg"
+        }
+      ],
+      "processType": "Anode manufacture"
+    }
+  ]
+}
