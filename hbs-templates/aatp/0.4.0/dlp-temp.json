@@ -1,0 +1,157 @@
+{
+  "type": ["DigitalLivestockPassport", "VerifiableCredential"],
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://vocabulary.aatp.org/aatp/dlp0.4.0"
+  ],
+  "id": "https://example-company.com/credentials/2a423366-a0d6-4855-ba65-2e0c926d09b0",
+  "issuer": {
+    "type": ["CredentialIssuer"],
+    "id": "did:web:identifiers.example-company.com:12345",
+    "name": "Example Company Pty Ltd",
+    "otherIdentifier": [
+      {
+        "type": ["Identifier"],
+        "id": "https://id.gs1.org/01/09520123456788/21/12345",
+        "name": "EV battery 300Ah.",
+        "registeredId": "90664869327",
+        "idScheme": {
+          "type": ["IdentifierScheme"],
+          "id": "https://id.gs1.org/01/",
+          "name": "Global Trade Identification Number (GTIN)"
+        }
+      }
+    ]
+  },
+  "validFrom": "2024-03-15T12:00:00",
+  "validUntil": "2034-03-15T12:00:00",
+  "credentialSubject": {
+    "type": ["BovineAnimal", "Product"],
+    "countryOfProduction": "Australia",
+    "id": "https://nlis.com.au/QDBH0132XBS01234",
+    "name": "Angus, grass fed, 2024",
+    "registeredId": "QDBH0132XBS01234",
+    "idScheme": {
+      "type": ["IdentifierScheme"],
+      "id": "https://id.gs1.org/01/",
+      "name": "Global Trade Identification Number (GTIN)"
+    },
+    "batchNumber": "Mob-2024-12",
+    "productImage": {
+      "type": ["Link"],
+      "linkURL": "https://imagedelivery.net/KrqWw3MfFI3Up2T0vHiP1g/c30d43f0-01a3-4e95-e83f-dfdbff154f00/public",
+      "linkName": "Angus Cattle Image",
+      "linkType": "https://test.uncefact.org/vocabulary/linkTypes/image"
+    },
+    "description": "Fresh from the family farm at the foothills of the Snowy Mountains. All cattle are single-origin, grass-fed, antibiotic and hormone-free.",
+    "productCategory": [
+      {
+        "type": ["Classification"],
+        "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
+        "code": "46410",
+        "name": "Primary cells and primary batteries",
+        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+        "schemeName": "UN Central Product Classification (CPC)"
+      }
+    ],
+    "furtherInformation": "https://example.com/further-information",
+    "producedByParty": {
+      "type": ["Identifier"],
+      "id": "https://abr.business.gov.au/ABN/View?abn=12345678901",
+      "name": "Example Farm Pty Ltd",
+      "registeredId": "12345678901",
+      "idScheme": {
+        "type": ["IdentifierScheme"],
+        "id": "https://abr.business.gov.au/",
+        "name": "Australian Business Register"
+      }
+    },
+    "producedAtFacility": {
+      "type": ["Identifier"],
+      "id": "did:web:facilities.example-farm.com:123",
+      "name": "Example Farm",
+      "registeredId": "PIC123456",
+      "idScheme": {
+        "type": ["IdentifierScheme"],
+        "id": "https://example.com/scheme",
+        "name": "Property Identification Code (PIC)"
+      }
+    },
+    "productionDate": "2024-01-01",
+    "granularityLevel": "item",
+    "conformityClaim": [
+      {
+        "type": ["Claim"],
+        "assessmentDate": "2024-02-01",
+        "declaredValue": "Grass-fed",
+        "id": "https://example.com/claims/12345",
+        "referenceStandard": "https://example.com/standards/grass-fed",
+        "referenceRegulation": "https://example.com/regulations/grass-fed",
+        "assessmentCriteria": "Grass-fed criteria",
+        "declaredValues": [
+          {
+            "type": ["Measure"],
+            "value": 100,
+            "unit": "percent"
+          }
+        ],
+        "conformance": true,
+        "conformityTopic": "https://vocabulary.uncefact.org/sustainability/emissions",
+        "conformityEvidence": [
+          {
+            "type": ["SecureLink"],
+            "linkURL": "https://example.com/evidence/12345",
+            "linkName": "Conformity Evidence",
+            "linkType": "https://test.uncefact.org/vocabulary/linkTypes/evidence"
+          }
+        ]
+      }
+    ],
+    "emissionsScorecard": {
+      "type": ["EmissionsPerformance"],
+      "carbonFootprint": {
+        "type": ["Measure"],
+        "value": 10,
+        "unit": "kgCO2e"
+      },
+      "declaredUnit": "kg",
+      "operationalScope": "Scope 1",
+      "primarySourcedRatio": {
+        "type": ["Measure"],
+        "value": 80,
+        "unit": "percent"
+      }
+    },
+    "traceabilityInformation": [
+      {
+        "type": ["TraceabilityPerformance"],
+        "traceabilityEvents": [
+          {
+            "type": ["SecureLink"],
+            "linkURL": "https://example.com/traceability/12345",
+            "linkName": "Traceability Event",
+            "linkType": "https://test.uncefact.org/vocabulary/linkTypes/traceability"
+          }
+        ]
+      }
+    ],
+    "characteristics": {
+      "type": ["BovineCharcteristics"],
+      "sex": "M",
+      "sexCharacteristic": "HY",
+      "breed": ["AA", "BB"],
+      "liveWeight": 350,
+      "carcassWeight": 180,
+      "fatScore": "1",
+      "muscleScore": "A",
+      "frameSize": "1",
+      "maturity": "early"
+    },
+    "healthTreatment": {
+      "type": ["HealthTreatment"],
+      "treatmentDate": "2024-02-15",
+      "treatmentType": "Vaccination",
+      "treatmentDetails": "Routine vaccination for bovine respiratory disease."
+    }
+  }
+}

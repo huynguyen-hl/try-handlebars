@@ -1,0 +1,218 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://test.vocabulary.uncefact.org/untp/dpp/0.5.0/"
+  ],
+  "type": [
+    "DigitalProductPassport",
+    "VerifiableCredential"
+  ],
+  "issuer": {
+    "id": "did:web:ad53-115-79-212-164.ngrok-free.app",
+    "name": "Green Valley Cattle Co Pty Ltd"
+  },
+  "credentialSubject": {
+    "type": [
+      "BovineAnimal",
+      "Product"
+    ],
+    "id": "https://nlis.com.au/QDBH0132XBS01234",
+    "name": "Angus, grass fed, early 2024",
+    "registeredId": "QDBH0132XBS01234",
+    "countryOfProduction": "AU",
+    "idScheme": {
+      "type": [
+        "IdentifierScheme"
+      ],
+      "id": "https://www.integrity.gov.au/nlis",
+      "name": "National Livestock Identification System"
+    },
+    "batchNumber": "Mob-2024-12",
+    "productImage": {
+      "type": ["Link"],
+      "linkURL": "https://imagedelivery.net/KrqWw3MfFI3Up2T0vHiP1g/c30d43f0-01a3-4e95-e83f-dfdbff154f00/public",
+      "linkName": "Angus Cattle Image",
+      "linkType": "https://test.uncefact.org/vocabulary/linkTypes/image"
+    },
+    "description": "Grass-fed Angus from Green Valley Station, certified organic, raised under carbon-neutral practices",
+    "productCategory": [
+      {
+        "type": [
+          "Classification"
+        ],
+        "id": "https://unstats.un.org/unsd/classifications/Econ/isic/4/0141",
+        "code": "0141",
+        "name": "Raising of cattle and buffaloes",
+        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/isic/4",
+        "schemeName": "International Standard Industrial Classification of All Economic Activities (ISIC), Revision 4"
+      }
+    ],
+    "producedByParty": {
+      "type": [
+        "Identifier"
+      ],
+      "id": "did:web:example-farm.com.au",
+      "name": "Green Valley Cattle Co Pty Ltd",
+      "registeredId": "87654321012",
+      "idScheme": {
+        "type": [
+          "IdentifierScheme"
+        ],
+        "id": "https://abr.business.gov.au",
+        "name": "ABN"
+      }
+    },
+    "producedAtFacility": {
+      "type": [
+        "Identifier"
+      ],
+      "id": "https://www.integrity.gov.au/pic/QBIX0987",
+      "name": "Green Valley Station",
+      "registeredId": "QBIX0987",
+      "idScheme": {
+        "type": [
+          "IdentifierScheme"
+        ],
+        "id": "https://www.integrity.gov.au/pic",
+        "name": "Property Identification Code"
+      }
+    },
+    "productionDate": "2024-01-15",
+    "granularityLevel": "item",
+    "characteristics": {
+      "type": [
+        "BovineCharcteristics"
+      ],
+      "sex": "M",
+      "sexCharacteristic": "SC",
+      "breed": [
+        "AA"
+      ],
+      "liveWeight": 450,
+      "fatScore": "3",
+      "muscleScore": "A",
+      "frameSize": "6",
+      "maturity": "early"
+    },
+    "healthTreatment": [
+      {
+        "type": [
+          "HealthTreatment"
+        ],
+        "icarDiseaseCategory": "1",
+        "treatmentDate": "2024-02-15",
+        "productId": "https://portal.apvma.gov.au/pubcris/53973",
+        "productBatchId": "BT202312",
+        "productExpiry": "2025-12-31",
+        "productName": "Standard Vaccination Protocol",
+        "doseRate": {
+          "type": [
+            "Measure"
+          ],
+          "value": 5,
+          "unit": "MLT"
+        },
+        "witholdingPeriod": 21
+      }
+    ],
+    "conformityClaim": [
+      {
+        "type": [
+          "Claim",
+          "Declaration"
+        ],
+        "id": "https://example-farm.com.au/livestock/QDBH0132XBS01234/claims/organic",
+        "assessmentDate": "2024-03-15",
+        "conformance": true,
+        "conformityTopic": "environment.biodiversity",
+        "conformityEvidence": {
+          "type": [
+            "SecureLink",
+            "Link"
+          ],
+          "linkURL": "https://example-farm.com.au/certifications/2024/organic",
+          "linkName": "Organic Certification",
+          "linkType": "https://vocabulary.uncefact.org/linkTypes/dcc",
+          "hashDigest": "a239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+          "hashMethod": "SHA-256",
+          "encryptionMethod": "none"
+        }
+      },
+      {
+        "type": [
+          "Claim",
+          "Declaration"
+        ],
+        "id": "https://cibolabs.com.au/attestations/2024/eudr/gv-123456",
+        "assessmentDate": "2024-03-15",
+        "conformance": true,
+        "conformityTopic": "environment.deforestation",
+        "conformityEvidence": {
+          "type": [
+            "SecureLink",
+            "Link"
+          ],
+          "linkURL": "https://cibolabs.com.au/attestations/2024/eudr/gv-123456/certificate.pdf",
+          "linkName": "EUDR Compliance Certificate",
+          "linkType": "https://vocabulary.uncefact.org/linkTypes/dcc",
+          "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+          "hashMethod": "SHA-256",
+          "encryptionMethod": "none"
+        }
+      }
+    ],
+    "emissionsScorecard": {
+      "type": [
+        "EmissionsPerformance"
+      ],
+      "carbonFootprint": 12.5,
+      "declaredUnit": "KGM",
+      "operationalScope": "CradleToGate",
+      "primarySourcedRatio": 0.85,
+      "reportingStandard": {
+        "type": [
+          "Standard"
+        ],
+        "id": "https://www.cleanenergyregulator.gov.au/ERF/project-and-contracts-registers/project-register/beef-cattle-herd-management",
+        "name": "Beef Cattle Herd Management Method",
+        "issuingParty": {
+          "type": [
+            "Identifier"
+          ],
+          "id": "https://www.cleanenergyregulator.gov.au",
+          "name": "Clean Energy Regulator"
+        },
+        "issueDate": "2023-01-01"
+      }
+    },
+    "traceabilityInformation": {
+      "type": [
+        "TraceabilityPerformance"
+      ],
+      "valueChainProcess": "Breeding",
+      "verifiedRatio": 1,
+      "traceabilityEvent": [
+        {
+          "type": [
+            "SecureLink",
+            "Link"
+          ],
+          "linkURL": "https://example-farm.com.au/livestock/QDBH0132XBS01234/events/birth",
+          "linkName": "Birth Registration Event",
+          "linkType": "https://vocabulary.uncefact.org/linkTypes/traceability-event",
+          "hashDigest": "b239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+          "hashMethod": "SHA-256",
+          "encryptionMethod": "AES"
+        }
+      ]
+    }
+  },
+  "credentialStatus": {
+    "id": "http://localhost:3332/credentials/status/bitstring-status-list/9#3",
+    "type": "BitstringStatusListEntry",
+    "statusPurpose": "revocation",
+    "statusListIndex": 3,
+    "statusListCredential": "http://localhost:3332/credentials/status/bitstring-status-list/9"
+  },
+  "id": "urn:uuid:08ad07e5-bc35-42f0-9622-565c7fe2fd05"
+}
