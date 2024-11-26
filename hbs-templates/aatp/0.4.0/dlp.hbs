@@ -841,17 +841,6 @@
       line-height: 19.25px;
       color: #232E3D;
     }
-
-    /* Media Queries for Mobiles */
-    @media (min-width: 50px) {
-      .container {
-        min-width: 375px;
-      }
-
-      .contents {
-        display: none;
-      }
-    }
   </style>
 </head>
 
@@ -926,7 +915,29 @@
           </div>
         </div>
       </section>
-      {{/if}} <!-- Removed Circularity Scorecard section -->
+      {{/if}}
+
+      <section class="production">
+        <div class="production-title">Production</div>
+        <div class="product-table table">
+          <div class="table-item"> <span class="item-title">Product category</span>
+            <p class="item-value"> {{#each credentialSubject.productCategory}} {{name}}{{#unless @last}}, {{/unless}} {{/each}}</p>
+          </div>
+          <div class="table-item"> <span class="item-title">Produced by</span> <a
+              href="{{credentialSubject.producedByParty.id}}"
+              class="blue-bottom-line-thick">{{credentialSubject.producedByParty.name}}</a> </div>
+          <div class="table-item"> <span class="item-title">Produced at</span>
+            <div class="item-value"> <a href="{{credentialSubject.producedAtFacility.id}}"
+                class="blue-bottom-line-thick">{{credentialSubject.producedAtFacility.name}}</a> </div>
+          </div>
+          <div class="table-item"> <span class="item-title">Date produced</span>
+            <p class="item-value">{{credentialSubject.productionDate}}</p>
+          </div>
+          <div class="table-item"> <span class="item-title">Country</span>
+            <p class="item-value">{{credentialSubject.countryOfProduction}}</p>
+          </div>
+        </div>
+      </section>
 
       <section class="emission-score-card">
         <h3 class="mission-score-title">Emissions Scorecard</h3>
@@ -1003,27 +1014,7 @@
             </a>
           </div> {{/each}} </div>
       </section>
-      <section class="production">
-        <div class="production-title">Production</div>
-        <div class="product-table table">
-          <div class="table-item"> <span class="item-title">Product category</span>
-            <p class="item-value"> {{#each credentialSubject.productCategory}} {{name}}{{#unless @last}}, {{/unless}} {{/each}}</p>
-          </div>
-          <div class="table-item"> <span class="item-title">Produced by</span> <a
-              href="{{credentialSubject.producedByParty.id}}"
-              class="blue-bottom-line-thick">{{credentialSubject.producedByParty.name}}</a> </div>
-          <div class="table-item"> <span class="item-title">Produced at</span>
-            <div class="item-value"> <a href="{{credentialSubject.producedAtFacility.id}}"
-                class="blue-bottom-line-thick">{{credentialSubject.producedAtFacility.name}}</a> </div>
-          </div>
-          <div class="table-item"> <span class="item-title">Date produced</span>
-            <p class="item-value">{{credentialSubject.productionDate}}</p>
-          </div>
-          <div class="table-item"> <span class="item-title">Country</span>
-            <p class="item-value">{{credentialSubject.countryOfProduction}}</p>
-          </div>
-        </div>
-      </section> <!-- Removed Composition section -->
+
       <section class="history">
         <div>
           <p class="section-title">History</p>
