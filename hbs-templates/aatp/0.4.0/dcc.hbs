@@ -826,9 +826,7 @@
                 <div class="trustmark">
                 {{#each credentialSubject.authorisation}}
                   <div class="trustmark-item">
-                    <div class="trustmark-box">
-                      <div class="trustmark-text">trustmark</div>
-                    </div>
+                    <img style="height: 80px;" src="data:image/svg+xml;base64, {{trustmark.file}}" />
                     <div class="trustmark-description">
                       {{name}} is accredited by <a target="_blank" href="{{issuingAuthority.id}}" class="">{{issuingAuthority.name}}</a>.
                     </div>
