@@ -1897,6 +1897,47 @@
       </section>
       {{/if}}
 
+      <section class="production">
+        <div class="production-title">Production</div>
+        <div class="product-table table">
+          <div class="table-item">
+            <span class="item-title">Product category</span>
+            <p class="item-value">{{#each credentialSubject.productCategory}}{{name}}{{#unless @last}},{{/unless}}
+              {{/each}}</p>
+          </div>
+          <div class="table-item">
+            <span class="item-title">Produced by</span>
+            <a target="_blank" href="{{credentialSubject.producedByParty.id}}"
+              class="blue-bottom-line-thick">{{credentialSubject.producedByParty.name}}</a>
+          </div>
+          <div class="table-item">
+            <span class="item-title">Produced at</span>
+            <div class="item-value">
+              <a target="_blank" href="{{credentialSubject.producedAtFacility.id}}"
+                class="blue-bottom-line-thick">{{credentialSubject.producedAtFacility.name}}</a>
+            </div>
+          </div>
+          <div class="table-item">
+            <span class="item-title">Date produced</span>
+            <p class="item-value">{{credentialSubject.productionDate}}</p>
+          </div>
+          <div class="table-item">
+            <span class="item-title">Country</span>
+            <p class="item-value">{{credentialSubject.countryOfProduction}}</p>
+          </div>
+          <div class="table-item">
+            <span class="item-title">Dimensions</span>
+            <p class="item-value">
+              <span>Weight: {{credentialSubject.dimensions.weight.value}}{{credentialSubject.dimensions.weight.unit}}</span>
+              <span>Length: {{credentialSubject.dimensions.length.value}}{{credentialSubject.dimensions.length.unit}}</span>
+              <span>Width: {{credentialSubject.dimensions.width.value}}{{credentialSubject.dimensions.width.unit}}</span>
+              <span>Height: {{credentialSubject.dimensions.height.value}}{{credentialSubject.dimensions.height.unit}}</span>
+              <span>Volume: {{credentialSubject.dimensions.volume.value}}{{credentialSubject.dimensions.volume.unit}}</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section class="passport">
         <div class="passport-issued-by-header">
           <h3>Circularity Scorecard</h3>
@@ -2056,47 +2097,6 @@
             </a>
           </div>
           {{/each}}
-        </div>
-      </section>
-
-      <section class="production">
-        <div class="production-title">Production</div>
-        <div class="product-table table">
-          <div class="table-item">
-            <span class="item-title">Product category</span>
-            <p class="item-value">{{#each credentialSubject.productCategory}}{{name}}{{#unless @last}},{{/unless}}
-              {{/each}}</p>
-          </div>
-          <div class="table-item">
-            <span class="item-title">Produced by</span>
-            <a target="_blank" href="{{credentialSubject.producedByParty.id}}"
-              class="blue-bottom-line-thick">{{credentialSubject.producedByParty.name}}</a>
-          </div>
-          <div class="table-item">
-            <span class="item-title">Produced at</span>
-            <div class="item-value">
-              <a target="_blank" href="{{credentialSubject.producedAtFacility.id}}"
-                class="blue-bottom-line-thick">{{credentialSubject.producedAtFacility.name}}</a>
-            </div>
-          </div>
-          <div class="table-item">
-            <span class="item-title">Date produced</span>
-            <p class="item-value">{{credentialSubject.productionDate}}</p>
-          </div>
-          <div class="table-item">
-            <span class="item-title">Country</span>
-            <p class="item-value">{{credentialSubject.countryOfProduction}}</p>
-          </div>
-          <div class="table-item">
-            <span class="item-title">Dimensions</span>
-            <p class="item-value">
-              <span>Weight: {{credentialSubject.dimensions.weight.value}}{{credentialSubject.dimensions.weight.unit}}</span>
-              <span>Length: {{credentialSubject.dimensions.length.value}}{{credentialSubject.dimensions.length.unit}}</span>
-              <span>Width: {{credentialSubject.dimensions.width.value}}{{credentialSubject.dimensions.width.unit}}</span>
-              <span>Height: {{credentialSubject.dimensions.height.value}}{{credentialSubject.dimensions.height.unit}}</span>
-              <span>Volume: {{credentialSubject.dimensions.volume.value}}{{credentialSubject.dimensions.volume.unit}}</span>
-            </p>
-          </div>
         </div>
       </section>
 
@@ -2286,6 +2286,59 @@
         </div>
       </div>
       {{/if}}
+
+      <div class="div-2">
+        <div class="typography-heading">
+          <div class="text-wrapper-4">Production</div>
+        </div>
+        <div class="div-5">
+          <div class="data-two-columns">
+            <div class="text-wrapper-12">Product category</div>
+            <div class="data-data">
+              <div class="data-2">{{#each credentialSubject.productCategory}}{{name}}{{#unless @last}},{{/unless}}
+                {{/each}}</div>
+            </div>
+          </div>
+          <div class="data-two-columns">
+            <div class="text-wrapper-12">Produced by</div>
+            <div class="data-data-link">
+              <a target="_blank" href="{{credentialSubject.producedByParty.id}}" class="line">
+                <p class="text-wrapper-2">{{credentialSubject.producedByParty.name}}</p>
+              </a>
+            </div>
+          </div>
+          <div class="data-two-columns">
+            <div class="text-wrapper-12">Produced at</div>
+            <div class="data-data-link">
+              <a target="_blank" href="{{credentialSubject.producedAtFacility.id}}" class="line">
+                <p class="text-wrapper-2">{{credentialSubject.producedAtFacility.name}}</p>
+              </a>
+            </div>
+          </div>
+          <div class="data-two-columns">
+            <div class="text-wrapper-12">Date produced</div>
+            <div class="data-wrapper">
+              <div class="data">{{credentialSubject.productionDate}}</div>
+            </div>
+          </div>
+          <div class="data-two-columns">
+            <div class="text-wrapper-12">Country</div>
+            <div class="data-data">
+              <div class="data">{{credentialSubject.countryOfProduction}}</div>
+            </div>
+          </div>
+          <div class="data-two-columns">
+            <div class="text-wrapper-12">Dimensions</div>
+            <div class="list">
+              <span>Weight: {{credentialSubject.dimensions.weight.value}}{{credentialSubject.dimensions.weight.unit}}</span>
+              <span>Length: {{credentialSubject.dimensions.length.value}}{{credentialSubject.dimensions.length.unit}}</span>
+              <span>Width: {{credentialSubject.dimensions.width.value}}{{credentialSubject.dimensions.width.unit}}</span>
+              <span>Height: {{credentialSubject.dimensions.height.value}}{{credentialSubject.dimensions.height.unit}}</span>
+              <span>Volume: {{credentialSubject.dimensions.volume.value}}{{credentialSubject.dimensions.volume.unit}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="div-2">
         <div class="typography-heading">
@@ -2480,59 +2533,6 @@
           {{/each}}
         </div>
       </section>
-
-      <div class="div-2">
-        <div class="typography-heading">
-          <div class="text-wrapper-4">Production</div>
-        </div>
-        <div class="div-5">
-          <div class="data-two-columns">
-            <div class="text-wrapper-12">Product category</div>
-            <div class="data-data">
-              <div class="data-2">{{#each credentialSubject.productCategory}}{{name}}{{#unless @last}},{{/unless}}
-                {{/each}}</div>
-            </div>
-          </div>
-          <div class="data-two-columns">
-            <div class="text-wrapper-12">Produced by</div>
-            <div class="data-data-link">
-              <a target="_blank" href="{{credentialSubject.producedByParty.id}}" class="line">
-                <p class="text-wrapper-2">{{credentialSubject.producedByParty.name}}</p>
-              </a>
-            </div>
-          </div>
-          <div class="data-two-columns">
-            <div class="text-wrapper-12">Produced at</div>
-            <div class="data-data-link">
-              <a target="_blank" href="{{credentialSubject.producedAtFacility.id}}" class="line">
-                <p class="text-wrapper-2">{{credentialSubject.producedAtFacility.name}}</p>
-              </a>
-            </div>
-          </div>
-          <div class="data-two-columns">
-            <div class="text-wrapper-12">Date produced</div>
-            <div class="data-wrapper">
-              <div class="data">{{credentialSubject.productionDate}}</div>
-            </div>
-          </div>
-          <div class="data-two-columns">
-            <div class="text-wrapper-12">Country</div>
-            <div class="data-data">
-              <div class="data">{{credentialSubject.countryOfProduction}}</div>
-            </div>
-          </div>
-          <div class="data-two-columns">
-            <div class="text-wrapper-12">Dimensions</div>
-            <div class="list">
-              <span>Weight: {{credentialSubject.dimensions.weight.value}}{{credentialSubject.dimensions.weight.unit}}</span>
-              <span>Length: {{credentialSubject.dimensions.length.value}}{{credentialSubject.dimensions.length.unit}}</span>
-              <span>Width: {{credentialSubject.dimensions.width.value}}{{credentialSubject.dimensions.width.unit}}</span>
-              <span>Height: {{credentialSubject.dimensions.height.value}}{{credentialSubject.dimensions.height.unit}}</span>
-              <span>Volume: {{credentialSubject.dimensions.volume.value}}{{credentialSubject.dimensions.volume.unit}}</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div class="div-2">
         <div class="typography-heading">
